@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Maison Événement</title>
+  <meta name="description" content="A spatial chronicle of atmospheric gatherings, private residencies, and architectural pavilions designed for patrons across the European continent." />
+  <meta name="theme-color" content="#2c1422" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio — Maison Événement" />
+  <meta property="og:description" content="A spatial chronicle of atmospheric gatherings, private residencies, and architectural pavilions." />
+  <meta property="og:url" content="https://example.com/portfolio.html" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuANPehe8pmxkIN5rz_9yrkjv-PwnlWvR0r6JQs0Q-494L-fo3Nwx-G9c4CUSE7SBNhfjbROqgMjrRvZUk1uDchatCAilTJbfnAoSQzX1wUGr0pNwPOHGgPOPXV7Ot1TXT92Slha9vtfTRnsHlHV1VgY_o0hNNwXWkDLfh_ty3m6T6HmoWFTez9HxoPRreV1eWERAgIRnIRYjPI1PNJXo5Amaq5zXqMTIMk7qYVqgpnEhRADhx0ulbyr" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%232c1422'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23fdf9f2' text-anchor='middle'>M</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+    ::-webkit-scrollbar { display: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 999;
+      padding: 0.75rem 1rem;
+      background: #2c1422;
+      color: #fdf9f2;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #785652;
+      outline-offset: 3px;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    /* Filter Animation */
+    .project-item {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .project-item.is-hidden {
+      display: none;
+    }
+    .project-item.is-filtering {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .project-item { transition: none !important; }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff", "outline": "#807479", "on-secondary-container": "#795752",
+            "on-surface": "#1c1c18", "primary-fixed-dim": "#e4bbcf", "on-tertiary-fixed-variant": "#51443a",
+            "on-primary-fixed-variant": "#5b3e4e", "secondary": "#785652", "on-secondary-fixed-variant": "#5e3f3b",
+            "surface-dim": "#dddad3", "secondary-fixed-dim": "#e8bcb7", "error-container": "#ffdad6",
+            "on-background": "#1c1c18", "on-primary-container": "#9d7a8b", "surface": "#fdf9f2",
+            "background": "#fdf9f2", "inverse-primary": "#e4bbcf", "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e6e2db", "tertiary-fixed-dim": "#d6c3b6", "primary-container": "#2c1422",
+            "on-surface-variant": "#4e4448", "tertiary-fixed": "#f3dfd1", "surface-container": "#f1ede6",
+            "surface-container-high": "#ebe8e1", "on-tertiary-fixed": "#241a11", "on-primary": "#ffffff",
+            "on-secondary": "#ffffff", "tertiary-container": "#241a11", "surface-tint": "#755566",
+            "tertiary": "#000000", "error": "#ba1a1a", "on-tertiary-container": "#918175",
+            "inverse-on-surface": "#f4f0e9", "primary": "#000000", "inverse-surface": "#31302c",
+            "on-secondary-fixed": "#2d1512", "on-error-container": "#93000a", "secondary-container": "#fdcfca",
+            "on-error": "#ffffff", "on-primary-fixed": "#2c1422", "secondary-fixed": "#ffdad5",
+            "surface-bright": "#fdf9f2", "primary-fixed": "#ffd8ea", "surface-container-highest": "#e6e2db",
+            "outline-variant": "#d1c3c8", "surface-container-low": "#f7f3ec"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem",
+            "space-lg": "2rem", "margin-tablet": "2rem", "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "margin": "4rem"
+          },
+          fontFamily: {
+            "headline-md": ["EB Garamond"], "headline-xl-mobile": ["EB Garamond"],
+            "label-regular": ["Hanken Grotesk"], "headline-sm": ["EB Garamond"],
+            "display-hero-mobile": ["EB Garamond"], "body-md": ["Hanken Grotesk"],
+            "headline-lg": ["EB Garamond"], "display-hero": ["EB Garamond"],
+            "body-sm": ["Hanken Grotesk"], "caption": ["Hanken Grotesk"],
+            "label-uppercase": ["Hanken Grotesk"], "headline-xl": ["EB Garamond"],
+            "body-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["EB Garamond"]
+          },
+          fontSize: {
+            "headline-md": ["24px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-xl-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-regular": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "display-hero-mobile": ["40px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-lg": ["36px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "caption": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "label-uppercase": ["11px", { lineHeight: "16px", letterSpacing: "0.14em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "54px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+
+    (function () {
+      'use strict';
+
+      function initMobileMenu() {
+        var toggle = document.getElementById('menu-toggle');
+        var menu   = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+
+        var icon = toggle.querySelector('.material-symbols-outlined');
+        var lastFocused = null;
+
+        function getFocusable() { return menu.querySelectorAll('a[href], button:not([disabled])'); }
+        
+        function open() {
+          lastFocused = document.activeElement;
+          menu.classList.remove('hidden');
+          document.body.classList.add('menu-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close navigation');
+          if (icon) icon.textContent = 'close';
+          var nodes = getFocusable();
+          if (nodes.length) nodes[0].focus();
+          document.addEventListener('keydown', onKey);
+        }
+        
+        function close() {
+          menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+          if (icon) icon.textContent = 'menu';
+          document.removeEventListener('keydown', onKey);
+          if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        }
+        
+        function onKey(e) {
+          if (e.key === 'Escape') { close(); return; }
+          if (e.key !== 'Tab') return;
+          var nodes = getFocusable();
+          if (!nodes.length) return;
+          var first = nodes[0];
+          var last  = nodes[nodes.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+
+        toggle.addEventListener('click', function () {
+          if (menu.classList.contains('hidden')) open();
+          else close();
+        });
+        menu.querySelectorAll('[data-menu-close], a').forEach(function (el) {
+          el.addEventListener('click', close);
+        });
+      }
+
+      function initFilters() {
+        var container = document.getElementById('filter-container');
+        var grid = document.getElementById('projects-grid');
+        if (!container || !grid) return;
+
+        var buttons = container.querySelectorAll('.filter-btn');
+        var items = grid.querySelectorAll('.project-item');
+
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var filter = btn.getAttribute('data-filter');
+
+            // Update active state on buttons
+            buttons.forEach(function (b) {
+              b.classList.remove('bg-primary-container', 'text-on-primary');
+              b.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-low');
+              b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('bg-primary-container', 'text-on-primary');
+            btn.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-low');
+            btn.setAttribute('aria-pressed', 'true');
+
+            // Filter logic with animation
+            items.forEach(function (item) {
+              var category = item.getAttribute('data-category');
+              
+              if (filter === 'all' || category === filter) {
+                item.classList.remove('is-hidden');
+                // Trigger reflow to restart animation
+                void item.offsetWidth; 
+                item.classList.remove('is-filtering');
+              } else {
+                item.classList.add('is-filtering');
+                setTimeout(function () {
+                  if (item.classList.contains('is-filtering')) {
+                    item.classList.add('is-hidden');
+                  }
+                }, 300);
+              }
+            });
+          });
+        });
+      }
+
+      function initYear() {
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      function init() { 
+        initMobileMenu(); 
+        initFilters();
+        initYear(); 
+      }
+
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } 
+      else { init(); }
+    })();
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/20">
+    <div class="h-20 w-full px-margin-mobile md:px-margin max-w-[1440px] mx-auto flex items-center justify-between gap-gutter">
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md min-w-0">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn73CQNvfLQvxBs7Uw-4DgMX_fKpT26Ov7enOEJbxsW9k38hRuyiPpD1dyWT7gPiF1U1udKsBf768myTDaL0AkkUwlUfJDUv-iYNdV92HwIj-fRiRXkpQW1AsR6bH136k4KOf8AUQTiSJwO5LlrJcM2XLLTP4aXIhvVwLoCrAskxnfKUR-F7ADzlm6Vnqm0z_m4ns0FN6UKiUZTjsOrfU4aXlgmNsPFQCe7ORWKuKEGpI7oboeEaE4"
+          alt="Maison Événement logo"
+          class="h-8 w-auto object-contain shrink-0"
+          width="32" height="32"
+          decoding="async"
+        />
+        <a href="index.html" class="flex flex-col text-left min-w-0">
+          <span class="font-headline-sm tracking-wide text-on-surface text-sm sm:text-headline-sm truncate">MAISON ÉVÉNEMENT</span>
+          <span class="hidden sm:block font-caption text-caption tracking-widest uppercase text-on-surface-variant">Event Architecture &amp; Design</span>
+        </a>
+      </div>
+
+      <nav class="hidden xl:flex items-center gap-gutter" aria-label="Primary">
+        <a href="index.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Home</a>
+        <a href="services.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Services</a>
+        <a href="portfolio.html" aria-current="page" class="transition-colors tracking-widest text-on-surface font-semibold underline decoration-secondary decoration-1 underline-offset-8 font-label-uppercase text-label-uppercase">Portfolio</a>
+        <a href="our-approach.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Our Approach</a>
+        <a href="about.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">About</a>
+        <a href="enquire.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Enquire</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+        <a href="enquire.html" class="hidden sm:inline-flex items-center justify-center h-10 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+          Plan Your Event
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary transition-colors duration-200 hover:bg-secondary"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-surface xl:hidden">
+    <div class="h-full overflow-y-auto pt-24 pb-12 px-margin-mobile">
+      <nav aria-label="Mobile" class="flex flex-col">
+        <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Home</a>
+        <a href="services.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Services</a>
+        <a href="portfolio.html" aria-current="page" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30 text-secondary italic">Portfolio</a>
+        <a href="our-approach.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Our Approach</a>
+        <a href="about.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">About</a>
+        <a href="enquire.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Enquire</a>
+      </nav>
+      <a href="enquire.html" class="mt-8 inline-flex w-full items-center justify-center h-12 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+        Plan Your Event
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+
+      <!-- ============================================================
+           PAGE HEADER
+           ============================================================ -->
+      <section class="w-full py-16 md:py-24 bg-surface-container-lowest border-b border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+            
+            <div class="max-w-3xl space-y-4">
+              <h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Selected Celebrations &amp; Scenography
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                A spatial chronicle of atmospheric gatherings, private residencies, and architectural pavilions designed for patrons across the European continent.
+              </p>
+            </div>
+
+            <!-- Curatorial Data Metrics -->
+            <div class="flex items-center gap-10 lg:border-l lg:border-outline-variant/30 lg:pl-10 shrink-0">
+              <div>
+                <span class="block font-headline-md text-headline-md text-on-surface">18</span>
+                <span class="font-caption text-caption uppercase tracking-widest text-on-surface-variant mt-1 block">Archived Acts</span>
+              </div>
+              <div>
+                <span class="block font-headline-md text-headline-md text-on-surface">06</span>
+                <span class="font-caption text-caption uppercase tracking-widest text-on-surface-variant mt-1 block">Host Countries</span>
+              </div>
+              <div>
+                <span class="block font-headline-md text-headline-md text-on-surface">100%</span>
+                <span class="font-caption text-caption uppercase tracking-widest text-on-surface-variant mt-1 block">Bespoke Plans</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FILTERS & GRID
+           ============================================================ -->
+      <section class="w-full py-12 md:py-20 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          
+          <!-- Filter Bar -->
+          <div class="mb-12 md:mb-16 border-b border-outline-variant/30 pb-4">
+            <div class="flex items-center gap-2 overflow-x-auto pb-2" id="filter-container" role="group" aria-label="Filter portfolio by category">
+              <button class="filter-btn whitespace-nowrap px-4 py-2 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-all duration-200" data-filter="all" aria-pressed="true">
+                All Works (18)
+              </button>
+              <button class="filter-btn whitespace-nowrap px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-uppercase text-label-uppercase tracking-widest transition-all duration-200" data-filter="weddings" aria-pressed="false">
+                Weddings (8)
+              </button>
+              <button class="filter-btn whitespace-nowrap px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-uppercase text-label-uppercase tracking-widest transition-all duration-200" data-filter="corporate" aria-pressed="false">
+                Corporate Galas (5)
+              </button>
+              <button class="filter-btn whitespace-nowrap px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-uppercase text-label-uppercase tracking-widest transition-all duration-200" data-filter="private" aria-pressed="false">
+                Private Celebrations (5)
+              </button>
+            </div>
+          </div>
+
+          <!-- Editorial Asymmetric Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8" id="projects-grid">
+            
+            <!-- Project 1 (Wide) -->
+            <article class="project-item md:col-span-8 flex flex-col group" data-category="weddings">
+              <div class="relative overflow-hidden aspect-[16/10] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuANPehe8pmxkIN5rz_9yrkjv-PwnlWvR0r6JQs0Q-494L-fo3Nwx-G9c4CUSE7SBNhfjbROqgMjrRvZUk1uDchatCAilTJbfnAoSQzX1wUGr0pNwPOHGgPOPXV7Ot1TXT92Slha9vtfTRnsHlHV1VgY_o0hNNwXWkDLfh_ty3m6T6HmoWFTez9HxoPRreV1eWERAgIRnIRYjPI1PNJXo5Amaq5zXqMTIMk7qYVqgpnEhRADhx0ulbyr" 
+                  alt="Outdoor luxury wedding banquet on the waterfront terrace of Villa del Balbianello Lake Como." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Weddings</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Bellagio, IT</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 md:p-8 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act I • 180 Guests</span>
+                  <span class="font-caption text-caption text-white/70">June 2024</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                    The Lake Como Villa Wedding
+                  </h2>
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Villa del Balbianello</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-2xl">
+                  A romantic, dusk celebration set along the historic terraced stone balustrades. Features antique dusty rose florals, custom bronze candelabras, and an acoustic quartet floating upon a wooden riva boat.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-wrap items-center gap-x-6 gap-y-2 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Creative Direction:</strong> Falalu Studio</span>
+                  <span><strong class="text-on-surface font-semibold">Floral Scope:</strong> Garden Roses &amp; Olive Branches</span>
+                  <span><strong class="text-on-surface font-semibold">Photography:</strong> Studio L’Ombre</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 (Tall) -->
+            <article class="project-item md:col-span-4 flex flex-col group" data-category="corporate">
+              <div class="relative overflow-hidden aspect-[4/5] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDfB8pMuywXBL0kJqB3Nj2odJo9Qgqz5Nk5rfoeUVvG-qWL0TvoOx3PnG8P31C6MRO_hGXPD0mJ8hyYiMNp0y9tvqTmR2QKB4TOrJXdRywjCOZLvsjplRAPFJpo3vIK-iaSXn8jArvwM9h6laGCCaCd58oVjEto1nu6tZ1D8N6KOaXQ_0FW8KfC2VplxsAxiEqc9yTZ_0mKpf9avLTYE0cGnctfHtV312LvlB1kHhyMKlvn86Jhu-K" 
+                  alt="Avant-garde scenography at Palais de Tokyo Paris for haute couture nocturne fashion gala." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex flex-col sm:flex-row gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Corporate</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Paris, FR</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act II • 400 Guests</span>
+                  <span class="font-caption text-caption text-white/70">March 2024</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                  The Nocturne Fashion Gala
+                </h2>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Brutalist concrete architecture softened by 400 meters of flowing midnight-plum velvet and monolith floral structures.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Spatial Design:</strong> Palais de Tokyo Pavilion</span>
+                  <span><strong class="text-on-surface font-semibold">Floral Scope:</strong> Black Calla &amp; Bronze Amaranth</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 (Medium) -->
+            <article class="project-item md:col-span-5 flex flex-col group" data-category="private">
+              <div class="relative overflow-hidden aspect-[4/5] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHJril2M_eaMPSrbYKi6B5j5O_mlVOJKG3iUjsx47cqXbxoDYo0OVVS0AyYTG1gk394dZtGWsH8G_05AcbLGcf52XJEm56-ODc54T0Q1HGWQSMu3CxWK6fKdWfeg9wwBX58TwF5RD2ZcOOMBsMv4to7h9DiFzvTTEqpfolX0dvK6Ps88UVeiKPEFWH9k13TvZHVywy47PDVLFl1WpQjBRLO9MDPTjVaB5m--zTXJkNx40gqfD-XRwu" 
+                  alt="Long 60-person imperial wooden banquet table set within an ancient olive grove in Gordes Provence." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex flex-col sm:flex-row gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Private</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Gordes, FR</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act III • 60 Guests</span>
+                  <span class="font-caption text-caption text-white/70">Sept 2023</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                  Provençal Bastide Harvest Dinner
+                </h2>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  A continuous 60-person imperial feast winding beneath centuries-old olive boughs, celebrating organic regional gastronomy and linen craftsmanship.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Scenography:</strong> Olive Groves &amp; Heirloom Stoneware</span>
+                  <span><strong class="text-on-surface font-semibold">Floral Scope:</strong> Wild Rosemary &amp; Dried Wheat</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4 (Medium Right) -->
+            <article class="project-item md:col-span-7 flex flex-col group" data-category="private">
+              <div class="relative overflow-hidden aspect-[16/11] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvROiN0dIInPOJ6HzEhkDtnp44jTN_7ZOW8nY-uyDsHSJXa1KSixncO11Ploq6zYYgm0fdWI4AUvLTO0Zld4zcr3llbC_yA0fFF0l2f9Zui9CsKle_SPHa4-Dy4rQFnXHZnRptTs1jwUzaLdo5NOwn2fBBAZHhnMqWhhwObuS-5KF7uiXdieQ-vVDxmIT4rRKMO9DJCHGeLFWM1xLUeCkuJouDnxwh-meB8wSQlmmAd3jNXmhkqWpL" 
+                  alt="Intimate cliffside dinner celebration overlooking Faraglioni rocks in Capri." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex flex-col sm:flex-row gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Private</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Anacapri, IT</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 md:p-8 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act IV • 40 Guests</span>
+                  <span class="font-caption text-caption text-white/70">July 2023</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                    Capri Cliffside Anniversary
+                  </h2>
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Villa San Michele</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-xl">
+                  A fragrant citrus grove overlooking the Mediterranean abyss. Pure white flora, hand-painted ceramic favors, and bespoke limoncello pairings.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-wrap items-center gap-x-6 gap-y-2 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Setting:</strong> Sea-facing Belvedere</span>
+                  <span><strong class="text-on-surface font-semibold">Floral Scope:</strong> Cascading Bougainvillea</span>
+                  <span><strong class="text-on-surface font-semibold">Photography:</strong> Rivista del Sole</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5 (Half) -->
+            <article class="project-item md:col-span-6 flex flex-col group" data-category="corporate">
+              <div class="relative overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjDNFMyD8Bgnmc4z7amHvWE793CYsSHl_e629rmF28yM282DJQ5a5MqI-9H55AZQ9MV6v07JczhamxgZ-Gx4jT3DjNm-Cs3UFOSEXuoZDH2pz_mwEEfZABk6Aa_h_wUWTxD7PLRAz0TWKoABLbZkbG-I3McI0xK_rCQ_lOTRddJidyamzzz8tw-LPNWkaEFWgCFsKpgT5X-HZtfOmamSDIiTwaGKo0NsXOzINqxtJBcEXwC1h0cZ5-" 
+                  alt="Sophisticated modern corporate lounge and executive dining space in a lakeside glass pavilion overlooking Lake Geneva." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex flex-col sm:flex-row gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Corporate</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Geneva, CH</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act V • 120 Guests</span>
+                  <span class="font-caption text-caption text-white/70">Nov 2023</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                  L’Heure Bleue Tech Leadership Summit
+                </h2>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  A restrained, modern executive assembly featuring architectural acoustic zoning, champagne lighting rhythms, and synchronized fireside dining.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Architecture:</strong> Glass Pavilion on Lake Geneva</span>
+                  <span><strong class="text-on-surface font-semibold">Lighting Score:</strong> Dynamic Low-Voltage Filament Grid</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6 (Half) -->
+            <article class="project-item md:col-span-6 flex flex-col group" data-category="weddings">
+              <div class="relative overflow-hidden aspect-[4/3] bg-surface-container border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7AaHAXswbrpgyWIDPO7SEgyFg6Ue3bDURQ-8ib3nbJPZGmDc6IXxAtg7JlwR8Ngu1bTIyJLsFAr1mp_fiOPwR6mhDy-grG8vieTHB9t052kVd18GPcnW3uqEkI3uSoYUY2UbW2lPwB2uka-Bf9T0AnienBxNoIdaN7fvYdJg137snn1hKqgnZ1FR4kRAUdmR3xHKlWWEqrk3pDq5jd1eoO-OPGorgsvyU1jne8jheRytGPdQYyY8i" 
+                  alt="Victorian botanical glasshouse wedding in Oxfordshire filled with suspended clouds of cascading white wisteria." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute top-4 left-4 flex flex-col sm:flex-row gap-2">
+                  <span class="bg-surface/90 backdrop-blur-md px-3 py-1 font-label-uppercase text-label-uppercase text-on-surface">Weddings</span>
+                  <span class="bg-primary-container text-on-primary px-3 py-1 font-label-uppercase text-label-uppercase">Oxfordshire, UK</span>
+                </div>
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex items-end justify-between">
+                  <span class="font-caption text-caption uppercase tracking-widest text-white/90">Act VI • 150 Guests</span>
+                  <span class="font-caption text-caption text-white/70">May 2024</span>
+                </div>
+              </div>
+              <div class="pt-5 space-y-4">
+                <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-secondary transition-colors">
+                  The Cotswolds Glasshouse Nuptials
+                </h2>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Victorian iron conservatory converted into an ethereal night garden with 14-foot suspended jasmine canopies and heritage botanical tablecapes.
+                </p>
+                <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-1 font-caption text-caption text-on-surface-variant">
+                  <span><strong class="text-on-surface font-semibold">Structure:</strong> 19th Century Botanical Orangery</span>
+                  <span><strong class="text-on-surface font-semibold">Floral Scope:</strong> Cascading Wisteria &amp; English Ivy</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Curatorial Note -->
+          <div class="mt-20 p-8 md:p-12 bg-surface-container-low border border-outline-variant/20 text-center flex flex-col items-center justify-center space-y-3">
+            <span class="material-symbols-outlined text-secondary text-[24px]" aria-hidden="true">verified</span>
+            <p class="font-body-md text-body-md text-on-surface italic max-w-2xl">
+              “All portfolio case studies represent conceptual art direction curated by Falalu Creative Studio.”
+            </p>
+            <span class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Archival Registration • Falalu Scenography Edition 2025</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CTA
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-primary-container text-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-7 space-y-3">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-surface tracking-tight leading-[1.05]">
+                Have an extraordinary vision in mind?
+              </h2>
+              <p class="font-body-md text-body-md text-surface-variant max-w-xl leading-relaxed">
+                We invite private patrons and brand directors to schedule a confidential conceptual dialogue with our design principals in Paris, London, or Florence.
+              </p>
+            </div>
+            <div class="lg:col-span-5 flex flex-col sm:flex-row lg:justify-end items-stretch sm:items-center gap-3">
+              <a href="enquire.html" class="inline-flex items-center justify-center h-12 px-7 bg-surface text-primary-container font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-surface-container-high">
+                Discuss Your Project
+              </a>
+              <a href="services.html" class="inline-flex items-center justify-center h-12 px-5 text-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:text-primary-fixed-dim">
+                Explore Scenography Services →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="w-full bg-surface-container-low text-on-surface py-16 md:py-20">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-gutter pb-10">
+
+        <div class="md:col-span-4 flex flex-col justify-between gap-6">
+          <div class="space-y-3">
+            <span class="font-headline-md text-headline-md tracking-tight">MAISON ÉVÉNEMENT</span>
+            <p class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Haute Scenography &amp; Event Planning</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+              Curating intimate private residencies, spatial transformations, and landmark celebrations for patrons of art, fashion, and culture globally.
+            </p>
+          </div>
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Brand Concept &amp; Architecture by Falalu Creative Studio</span>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-4">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">Studio Locations</span>
+          <div class="grid grid-cols-3 gap-4 font-body-sm text-body-sm text-on-surface-variant">
+            <div><p class="font-semibold text-on-surface">Paris</p><p>Place Vendôme</p><p>75001 Paris, FR</p></div>
+            <div><p class="font-semibold text-on-surface">London</p><p>Mayfair W1</p><p>London, UK</p></div>
+            <div><p class="font-semibold text-on-surface">Florence</p><p>Lungarno Corsini</p><p>50123 Firenze, IT</p></div>
+          </div>
+          <p class="font-caption text-caption text-on-surface-variant italic">In-person consultations hosted strictly by private appointment.</p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">The Journal &amp; Inquiries</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Receive biannual private gazettes featuring scenographic essays, material studies, and private salon announcements.
+          </p>
+          <form data-newsletter-form class="flex items-stretch gap-2" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address"
+              class="w-full h-11 px-4 bg-surface border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary"
+            />
+            <button type="submit" class="h-11 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p data-newsletter-status class="hidden font-caption text-caption text-secondary" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-caption text-caption text-on-surface-variant">
+        <p class="max-w-2xl">
+          © <span data-year>2025</span> Maison Événement. Demonstration portfolio concept by Falalu Creative Studio. All names, testimonials, and project case studies are fictional.
+        </p>
+        <p class="md:text-right">Private Celebrations · Spatial Architecture · World Concierge</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
