@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquire — Maison Événement</title>
+  <meta name="description" content="Initiate your celebration dialogue with Maison Événement. We are currently accepting commissions for the 2025 and 2026 calendar years." />
+  <meta name="theme-color" content="#2c1422" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Enquire — Maison Événement" />
+  <meta property="og:description" content="Initiate your celebration dialogue with Maison Événement." />
+  <meta property="og:url" content="https://example.com/enquire.html" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTXPx_ktNFzVZOg_20tmrjkb_d2RrNd93-PRWkjkHddBIc6nOS5EDRR6EsG7hJHHIBebjYvf2hVxiosSCoZgUDpgGh9jcgVeOhdU5a-rixRiPAAwq98EEfEgkLd5uW8buRC7DoE5GBPM4IkmSbQux5DoYnkY6_jqXoeaQbufSiRRhlOQI__HCBOMAbmlWXguJeEQ8nA1DC3d3XtGLAhN5MHNm2DR2RU56U6W-zhhtU2zb7fXcxo1O" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%232c1422'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23fdf9f2' text-anchor='middle'>M</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+    ::-webkit-scrollbar { display: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 999;
+      padding: 0.75rem 1rem;
+      background: #2c1422;
+      color: #fdf9f2;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #785652;
+      outline-offset: 3px;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    /* Form Styles */
+    .form-input {
+      width: 100%;
+      height: 3rem;
+      padding: 0 1rem;
+      background: #fdf9f2;
+      border: 1px solid rgba(209, 195, 200, 0.4);
+      color: #1c1c18;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 15px;
+      transition: border-color 0.2s ease;
+    }
+    .form-input:focus { border-color: #785652; outline: none; }
+    .form-input::placeholder { color: #807479; opacity: 0.6; }
+    .form-input[aria-invalid="true"] { border-color: #ba1a1a; }
+    
+    .form-textarea {
+      width: 100%;
+      padding: 1rem;
+      background: #fdf9f2;
+      border: 1px solid rgba(209, 195, 200, 0.4);
+      color: #1c1c18;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 15px;
+      resize: vertical;
+      transition: border-color 0.2s ease;
+    }
+    .form-textarea:focus { border-color: #785652; outline: none; }
+
+    .radio-card input[type="radio"]:checked + div {
+      border-color: #2c1422;
+      background-color: #2c1422;
+      color: #ffffff;
+    }
+    .radio-card input[type="radio"]:checked + div .sub-text {
+      color: #e4bbcf;
+    }
+    .radio-card input[type="radio"]:focus-visible + div {
+      outline: 2px solid #785652;
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff", "outline": "#807479", "on-secondary-container": "#795752",
+            "on-surface": "#1c1c18", "primary-fixed-dim": "#e4bbcf", "on-tertiary-fixed-variant": "#51443a",
+            "on-primary-fixed-variant": "#5b3e4e", "secondary": "#785652", "on-secondary-fixed-variant": "#5e3f3b",
+            "surface-dim": "#dddad3", "secondary-fixed-dim": "#e8bcb7", "error-container": "#ffdad6",
+            "on-background": "#1c1c18", "on-primary-container": "#9d7a8b", "surface": "#fdf9f2",
+            "background": "#fdf9f2", "inverse-primary": "#e4bbcf", "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e6e2db", "tertiary-fixed-dim": "#d6c3b6", "primary-container": "#2c1422",
+            "on-surface-variant": "#4e4448", "tertiary-fixed": "#f3dfd1", "surface-container": "#f1ede6",
+            "surface-container-high": "#ebe8e1", "on-tertiary-fixed": "#241a11", "on-primary": "#ffffff",
+            "on-secondary": "#ffffff", "tertiary-container": "#241a11", "surface-tint": "#755566",
+            "tertiary": "#000000", "error": "#ba1a1a", "on-tertiary-container": "#918175",
+            "inverse-on-surface": "#f4f0e9", "primary": "#000000", "inverse-surface": "#31302c",
+            "on-secondary-fixed": "#2d1512", "on-error-container": "#93000a", "secondary-container": "#fdcfca",
+            "on-error": "#ffffff", "on-primary-fixed": "#2c1422", "secondary-fixed": "#ffdad5",
+            "surface-bright": "#fdf9f2", "primary-fixed": "#ffd8ea", "surface-container-highest": "#e6e2db",
+            "outline-variant": "#d1c3c8", "surface-container-low": "#f7f3ec"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem",
+            "space-lg": "2rem", "margin-tablet": "2rem", "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "margin": "4rem"
+          },
+          fontFamily: {
+            "headline-md": ["EB Garamond"], "headline-xl-mobile": ["EB Garamond"],
+            "label-regular": ["Hanken Grotesk"], "headline-sm": ["EB Garamond"],
+            "display-hero-mobile": ["EB Garamond"], "body-md": ["Hanken Grotesk"],
+            "headline-lg": ["EB Garamond"], "display-hero": ["EB Garamond"],
+            "body-sm": ["Hanken Grotesk"], "caption": ["Hanken Grotesk"],
+            "label-uppercase": ["Hanken Grotesk"], "headline-xl": ["EB Garamond"],
+            "body-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["EB Garamond"]
+          },
+          fontSize: {
+            "headline-md": ["24px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-xl-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-regular": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "display-hero-mobile": ["40px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-lg": ["36px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "caption": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "label-uppercase": ["11px", { lineHeight: "16px", letterSpacing: "0.14em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "54px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+
+    (function () {
+      'use strict';
+
+      /* --- Mobile Menu --- */
+      function initMobileMenu() {
+        var toggle = document.getElementById('menu-toggle');
+        var menu   = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+
+        var icon = toggle.querySelector('.material-symbols-outlined');
+        var lastFocused = null;
+
+        function getFocusable() { return menu.querySelectorAll('a[href], button:not([disabled])'); }
+        
+        function open() {
+          lastFocused = document.activeElement;
+          menu.classList.remove('hidden');
+          document.body.classList.add('menu-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close navigation');
+          if (icon) icon.textContent = 'close';
+          var nodes = getFocusable();
+          if (nodes.length) nodes[0].focus();
+          document.addEventListener('keydown', onKey);
+        }
+        
+        function close() {
+          menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+          if (icon) icon.textContent = 'menu';
+          document.removeEventListener('keydown', onKey);
+          if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        }
+        
+        function onKey(e) {
+          if (e.key === 'Escape') { close(); return; }
+          if (e.key !== 'Tab') return;
+          var nodes = getFocusable();
+          if (!nodes.length) return;
+          var first = nodes[0];
+          var last  = nodes[nodes.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+
+        toggle.addEventListener('click', function () {
+          if (menu.classList.contains('hidden')) open();
+          else close();
+        });
+        menu.querySelectorAll('[data-menu-close], a').forEach(function (el) {
+          el.addEventListener('click', close);
+        });
+      }
+
+      /* --- Form Validation & Modal --- */
+      function initEnquiryForm() {
+        var form = document.getElementById('enquiry-form');
+        var modal = document.getElementById('confirmation-modal');
+        var closeModalBtn = document.getElementById('close-modal');
+        if (!form || !modal) return;
+
+        var lastFocused = null;
+
+        function openModal() {
+          lastFocused = document.activeElement;
+          modal.classList.remove('hidden');
+          document.body.classList.add('menu-open'); // reuse lock
+          
+          var focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          if (focusable.length) focusable[0].focus();
+          
+          document.addEventListener('keydown', trapFocus);
+        }
+
+        function closeModal() {
+          modal.classList.add('hidden');
+          document.body.classList.remove('menu-open');
+          document.removeEventListener('keydown', trapFocus);
+          if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        }
+
+        function trapFocus(e) {
+          if (e.key === 'Escape') { closeModal(); return; }
+          if (e.key !== 'Tab') return;
+          var focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          if (!focusable.length) return;
+          var first = focusable[0];
+          var last = focusable[focusable.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+
+        // Close on backdrop click
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+
+        // Validation
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var isValid = true;
+          var firstInvalid = null;
+
+          // Clear previous errors
+          form.querySelectorAll('.error-msg').forEach(function(el) { el.remove(); });
+          form.querySelectorAll('[aria-invalid="true"]').forEach(function(el) { el.removeAttribute('aria-invalid'); });
+
+          var requiredInputs = form.querySelectorAll('[required]');
+          requiredInputs.forEach(function(input) {
+            var val = input.value.trim();
+            if (!val) {
+              isValid = false;
+              input.setAttribute('aria-invalid', 'true');
+              showError(input, 'This field is required.');
+              if (!firstInvalid) firstInvalid = input;
+            } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+              isValid = false;
+              input.setAttribute('aria-invalid', 'true');
+              showError(input, 'Please enter a valid email address.');
+              if (!firstInvalid) firstInvalid = input;
+            }
+          });
+
+          if (isValid) {
+            openModal();
+            form.reset();
+          } else if (firstInvalid) {
+            firstInvalid.focus();
+          }
+        });
+
+        function showError(input, msg) {
+          var errorId = input.id + '-error';
+          var errorEl = document.createElement('span');
+          errorEl.id = errorId;
+          errorEl.className = 'error-msg font-caption text-caption text-error mt-1 block';
+          errorEl.setAttribute('role', 'alert');
+          errorEl.textContent = msg;
+          input.setAttribute('aria-describedby', errorId);
+          
+          // Insert after input or its wrapper
+          var parent = input.parentElement;
+          if (parent.classList.contains('relative') || parent.classList.contains('flex')) {
+            parent.appendChild(errorEl);
+          } else {
+            parent.parentElement.appendChild(errorEl);
+          }
+        }
+      }
+
+      function initYear() {
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      function init() { 
+        initMobileMenu(); 
+        initEnquiryForm();
+        initYear(); 
+      }
+
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } 
+      else { init(); }
+    })();
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/20">
+    <div class="h-20 w-full px-margin-mobile md:px-margin max-w-[1440px] mx-auto flex items-center justify-between gap-gutter">
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md min-w-0">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn73CQNvfLQvxBs7Uw-4DgMX_fKpT26Ov7enOEJbxsW9k38hRuyiPpD1dyWT7gPiF1U1udKsBf768myTDaL0AkkUwlUfJDUv-iYNdV92HwIj-fRiRXkpQW1AsR6bH136k4KOf8AUQTiSJwO5LlrJcM2XLLTP4aXIhvVwLoCrAskxnfKUR-F7ADzlm6Vnqm0z_m4ns0FN6UKiUZTjsOrfU4aXlgmNsPFQCe7ORWKuKEGpI7oboeEaE4"
+          alt="Maison Événement logo"
+          class="h-8 w-auto object-contain shrink-0"
+          width="32" height="32"
+          decoding="async"
+        />
+        <a href="index.html" class="flex flex-col text-left min-w-0">
+          <span class="font-headline-sm tracking-wide text-on-surface text-sm sm:text-headline-sm truncate">MAISON ÉVÉNEMENT</span>
+          <span class="hidden sm:block font-caption text-caption tracking-widest uppercase text-on-surface-variant">Event Architecture &amp; Design</span>
+        </a>
+      </div>
+
+      <nav class="hidden xl:flex items-center gap-gutter" aria-label="Primary">
+        <a href="index.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Home</a>
+        <a href="services.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Services</a>
+        <a href="portfolio.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Portfolio</a>
+        <a href="our-approach.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Our Approach</a>
+        <a href="about.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">About</a>
+        <a href="enquire.html" aria-current="page" class="transition-colors tracking-widest text-on-surface font-semibold underline decoration-secondary decoration-1 underline-offset-8 font-label-uppercase text-label-uppercase">Enquire</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+        <a href="enquire.html" class="hidden sm:inline-flex items-center justify-center h-10 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+          Plan Your Event
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary transition-colors duration-200 hover:bg-secondary"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-surface xl:hidden">
+    <div class="h-full overflow-y-auto pt-24 pb-12 px-margin-mobile">
+      <nav aria-label="Mobile" class="flex flex-col">
+        <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Home</a>
+        <a href="services.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Services</a>
+        <a href="portfolio.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Portfolio</a>
+        <a href="our-approach.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Our Approach</a>
+        <a href="about.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">About</a>
+        <a href="enquire.html" aria-current="page" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30 text-secondary italic">Enquire</a>
+      </nav>
+      <a href="enquire.html" class="mt-8 inline-flex w-full items-center justify-center h-12 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+        Plan Your Event
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+
+      <!-- ============================================================
+           PAGE HEADER
+           ============================================================ -->
+      <section class="w-full py-16 md:py-24 bg-surface-container-lowest border-b border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+            <div class="max-w-3xl space-y-4">
+              <h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Initiate Your Celebration Dialogue
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                We are currently accepting commissions for the 2025 and 2026 calendar years. Please share the preliminary architecture of your gathering below.
+              </p>
+            </div>
+            
+            <div class="flex-shrink-0">
+              <div class="bg-surface-container-low border border-outline-variant/20 p-5 flex items-center gap-4">
+                <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">calendar_month</span>
+                <div>
+                  <p class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Availability Status</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Limited 2025 autumn suites &amp; open 2026 books</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FORM & SIDEBAR
+           ============================================================ -->
+      <section class="w-full py-12 md:py-20 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- Left: Form -->
+            <div class="lg:col-span-7 xl:col-span-8">
+              
+              <div class="mb-8 p-4 bg-secondary-container/30 border border-secondary/20 flex items-start gap-3">
+                <span class="material-symbols-outlined text-secondary text-lg mt-0.5" aria-hidden="true">info</span>
+                <p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+                  <strong class="text-on-surface">Demonstration Form:</strong> This is a portfolio concept. No data is transmitted or stored. Submissions are simulated for demonstration purposes only.
+                </p>
+              </div>
+
+              <form id="enquiry-form" class="space-y-0" novalidate>
+                
+                <!-- Section 1 -->
+                <div class="py-8 border-b border-outline-variant/30 first:pt-0">
+                  <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Patron Details</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label for="patron-name" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Full Legal Name *</label>
+                      <input type="text" id="patron-name" name="name" required class="form-input" placeholder="e.g. Lady Genevieve Vance" />
+                    </div>
+                    <div class="space-y-2">
+                      <label for="patron-email" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Email Address *</label>
+                      <input type="email" id="patron-email" name="email" required class="form-input" placeholder="vance@residence.co.uk" />
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                      <label for="patron-phone" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Telephone with Country Code *</label>
+                      <div class="flex">
+                        <span class="inline-flex items-center justify-center px-4 bg-surface-container border border-r-0 border-outline-variant/40 text-on-surface select-none">+</span>
+                        <input type="tel" id="patron-phone" name="phone" required class="form-input" placeholder="44 20 7946 0912" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="py-8 border-b border-outline-variant/30">
+                  <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Celebration Particulars</h2>
+                  
+                  <div class="space-y-6">
+                    <div class="space-y-3">
+                      <label class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Typology of Gathering *</label>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Option 1 -->
+                        <label class="radio-card cursor-pointer block">
+                          <input type="radio" name="event_type" value="wedding" class="peer sr-only" checked />
+                          <div class="p-4 border border-outline-variant/40 bg-surface-container-lowest transition-colors duration-200 peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            <p class="font-headline-sm text-headline-sm">Wedding &amp; Nuptials</p>
+                            <p class="sub-text font-caption text-caption text-on-surface-variant mt-1">Multi-day destination rites</p>
+                          </div>
+                        </label>
+                        <!-- Option 2 -->
+                        <label class="radio-card cursor-pointer block">
+                          <input type="radio" name="event_type" value="private" class="peer sr-only" />
+                          <div class="p-4 border border-outline-variant/40 bg-surface-container-lowest transition-colors duration-200 peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            <p class="font-headline-sm text-headline-sm">Private Milestone</p>
+                            <p class="sub-text font-caption text-caption text-on-surface-variant mt-1">Intimate salons &amp; jubilee</p>
+                          </div>
+                        </label>
+                        <!-- Option 3 -->
+                        <label class="radio-card cursor-pointer block">
+                          <input type="radio" name="event_type" value="corporate" class="peer sr-only" />
+                          <div class="p-4 border border-outline-variant/40 bg-surface-container-lowest transition-colors duration-200 peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            <p class="font-headline-sm text-headline-sm">Brand &amp; Corporate Gala</p>
+                            <p class="sub-text font-caption text-caption text-on-surface-variant mt-1">Haute couture &amp; cultural salons</p>
+                          </div>
+                        </label>
+                        <!-- Option 4 -->
+                        <label class="radio-card cursor-pointer block">
+                          <input type="radio" name="event_type" value="editorial" class="peer sr-only" />
+                          <div class="p-4 border border-outline-variant/40 bg-surface-container-lowest transition-colors duration-200 peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            <p class="font-headline-sm text-headline-sm">Editorial Scenography</p>
+                            <p class="sub-text font-caption text-caption text-on-surface-variant mt-1">Spatial and floral art direction</p>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div class="space-y-2">
+                        <label for="event-date" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Desired Season &amp; Year *</label>
+                        <input type="text" id="event-date" name="date" required class="form-input" placeholder="e.g. September 2025 or Late Spring 2026" />
+                      </div>
+                      <div class="space-y-2">
+                        <label for="event-location" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Destination or Venue</label>
+                        <input type="text" id="event-location" name="location" class="form-input" placeholder="e.g. Lake Como, Provence, Mayfair, or TBD" />
+                      </div>
+                    </div>
+
+                    <div class="space-y-3">
+                      <label class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Estimated Guest Count *</label>
+                      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <label class="cursor-pointer">
+                          <input type="radio" name="guest_count" value="under50" class="peer sr-only" checked />
+                          <div class="p-3 text-center border border-outline-variant/40 bg-surface-container-lowest font-body-sm text-body-sm transition-colors peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            &lt; 50 Patrons
+                          </div>
+                        </label>
+                        <label class="cursor-pointer">
+                          <input type="radio" name="guest_count" value="50-120" class="peer sr-only" />
+                          <div class="p-3 text-center border border-outline-variant/40 bg-surface-container-lowest font-body-sm text-body-sm transition-colors peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            50 – 120
+                          </div>
+                        </label>
+                        <label class="cursor-pointer">
+                          <input type="radio" name="guest_count" value="120-250" class="peer sr-only" />
+                          <div class="p-3 text-center border border-outline-variant/40 bg-surface-container-lowest font-body-sm text-body-sm transition-colors peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            120 – 250
+                          </div>
+                        </label>
+                        <label class="cursor-pointer">
+                          <input type="radio" name="guest_count" value="250plus" class="peer sr-only" />
+                          <div class="p-3 text-center border border-outline-variant/40 bg-surface-container-lowest font-body-sm text-body-sm transition-colors peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container peer-focus-visible:ring-2 peer-focus-visible:ring-secondary peer-focus-visible:ring-offset-2">
+                            250+
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="py-8 border-b border-outline-variant/30">
+                  <h2 class="font-headline-md text-headline-md text-on-surface mb-6">Scope &amp; Investment</h2>
+                  
+                  <div class="space-y-6">
+                    <div class="space-y-3">
+                      <label class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Bespoke Disciplines Desired</label>
+                      <div class="space-y-2">
+                        <label class="flex items-start gap-3 p-3 border border-outline-variant/40 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-low transition-colors">
+                          <input type="checkbox" name="services" value="production" class="mt-1 w-4 h-4 accent-primary-container" checked />
+                          <div>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface block">Full Architectural Production</span>
+                            <span class="font-caption text-caption text-on-surface-variant">Spatial curation, logistics &amp; vendor mastery</span>
+                          </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 border border-outline-variant/40 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-low transition-colors">
+                          <input type="checkbox" name="services" value="floral" class="mt-1 w-4 h-4 accent-primary-container" checked />
+                          <div>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface block">Floral &amp; Scenographic Styling</span>
+                            <span class="font-caption text-caption text-on-surface-variant">Botanical sculptures, bespoke linens &amp; lights</span>
+                          </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 border border-outline-variant/40 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-low transition-colors">
+                          <input type="checkbox" name="services" value="venue" class="mt-1 w-4 h-4 accent-primary-container" />
+                          <div>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface block">Historical Venue Transformation</span>
+                            <span class="font-caption text-caption text-on-surface-variant">Drapery, structural builds &amp; private palace staging</span>
+                          </div>
+                        </label>
+                        <label class="flex items-start gap-3 p-3 border border-outline-variant/40 bg-surface-container-lowest cursor-pointer hover:bg-surface-container-low transition-colors">
+                          <input type="checkbox" name="services" value="concierge" class="mt-1 w-4 h-4 accent-primary-container" />
+                          <div>
+                            <span class="font-body-md text-body-md font-semibold text-on-surface block">Multi-Day Patron Concierge</span>
+                            <span class="font-caption text-caption text-on-surface-variant">Guest transport, private soirees &amp; itinerary curation</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <label for="event-budget" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Approximate Total Event Budget Allocation *</label>
+                      <div class="relative">
+                        <select id="event-budget" name="budget" required class="form-input appearance-none pr-10 cursor-pointer">
+                          <option disabled selected value="">Select anticipated production threshold</option>
+                          <option value="75-150">€75,000 – €150,000 (Intimate Curations)</option>
+                          <option value="150-300">€150,000 – €300,000 (Full Multi-Day Production)</option>
+                          <option value="300-600">€300,000 – €600,000 (Architectural Transformations)</option>
+                          <option value="600plus">€600,000+ (Grand Palace &amp; Global Landmark Residencies)</option>
+                        </select>
+                        <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-lg" aria-hidden="true">expand_more</span>
+                      </div>
+                      <p class="font-caption text-caption text-on-surface-variant mt-1">
+                        Our commissions are intentionally limited each season to ensure absolute spatial immersion and undivided director oversight.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="py-8 border-b border-outline-variant/30">
+                  <h2 class="font-headline-md text-headline-md text-on-surface mb-6">The Vision &amp; Atmosphere</h2>
+                  
+                  <div class="space-y-6">
+                    <div class="space-y-2">
+                      <label for="vision-text" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">Aesthetic Atmosphere &amp; Sensory Desires</label>
+                      <textarea id="vision-text" name="vision" rows="4" class="form-textarea" placeholder="Share with us your favored pigments, textures, musical cadence, culinary priorities, or an evocative memory that captures how you wish your patrons to feel..."></textarea>
+                    </div>
+                    <div class="space-y-2">
+                      <label for="discovery-source" class="font-label-uppercase text-label-uppercase text-on-surface-variant tracking-wider block">How did you discover Maison Événement?</label>
+                      <input type="text" id="discovery-source" name="source" class="form-input" placeholder="e.g. Patron Referral, Architectural Digest, Vogue Weddings, Falalu Studio" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Area -->
+                <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                  <div class="flex items-center gap-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[18px]" aria-hidden="true">lock</span>
+                    <span class="font-caption text-caption">Encrypted via TLS • Strictly Discretionary Protocol</span>
+                  </div>
+                  <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center h-14 px-10 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+                    <span>Submit Private Enquiry</span>
+                    <span class="material-symbols-outlined text-[18px] ml-3" aria-hidden="true">arrow_forward</span>
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Right: Sidebar -->
+            <aside class="lg:col-span-5 xl:col-span-4 flex flex-col gap-8 lg:sticky lg:top-28">
+              
+              <!-- Image & Process -->
+              <div class="bg-surface-container-lowest border border-outline-variant/20 overflow-hidden">
+                <div class="aspect-[4/3] w-full bg-surface-container">
+                  <img 
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTXPx_ktNFzVZOg_20tmrjkb_d2RrNd93-PRWkjkHddBIc6nOS5EDRR6EsG7hJHHIBebjYvf2hVxiosSCoZgUDpgGh9jcgVeOhdU5a-rixRiPAAwq98EEfEgkLd5uW8buRC7DoE5GBPM4IkmSbQux5DoYnkY6_jqXoeaQbufSiRRhlOQI__HCBOMAbmlWXguJeEQ8nA1DC3d3XtGLAhN5MHNm2DR2RU56U6W-zhhtU2zb7fXcxo1O" 
+                    alt="Editorial haute scenography interior table setting in a French chateau salon with candlelight and muted antique rose florals." 
+                    class="w-full h-full object-cover" 
+                    loading="lazy" 
+                    decoding="async"
+                  />
+                </div>
+                <div class="p-8 space-y-6">
+                  <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">The Consultation Process</h2>
+                  <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                      <span class="font-headline-sm text-headline-sm text-secondary font-normal mt-0.5">I</span>
+                      <div>
+                        <h3 class="font-body-md text-body-md font-semibold text-on-surface">Personal Concierge Review</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Within 24–48 hours, our Atelier Director personally reviews your date, destination, and architectural scope.</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                      <span class="font-headline-sm text-headline-sm text-secondary font-normal mt-0.5">II</span>
+                      <div>
+                        <h3 class="font-body-md text-body-md font-semibold text-on-surface">Confidential Salon Session</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">A 45-minute salon dialogue hosted virtually or at our private suites in Paris (Place Vendôme) or London (Mayfair).</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                      <span class="font-headline-sm text-headline-sm text-secondary font-normal mt-0.5">III</span>
+                      <div>
+                        <h3 class="font-body-md text-body-md font-semibold text-on-surface">Spatial Dossier &amp; Proposal</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">We formulate a bespoke scenographic vision folio detailing spatial schemes, sensory materiality, and financial frameworks.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Info -->
+              <div class="bg-surface-container-low p-8 border border-outline-variant/20 space-y-6">
+                <h3 class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">Direct Communications</h3>
+                
+                <div class="space-y-5">
+                  <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5" aria-hidden="true">mail</span>
+                    <div>
+                      <p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Confidential Dispatch</p>
+                      <a href="mailto:atelier@maison-evenement.concept" class="font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors underline underline-offset-4 decoration-secondary/40">atelier@maison-evenement.concept</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5" aria-hidden="true">call</span>
+                    <div>
+                      <p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Director's Private Line</p>
+                      <a href="tel:+33142685500" class="font-body-sm text-body-sm text-on-surface hover:text-secondary transition-colors">+33 (0)1 42 68 55 00</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5" aria-hidden="true">location_on</span>
+                    <div>
+                      <p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1">Flagship Atelier</p>
+                      <p class="font-body-sm text-body-sm text-on-surface">14 Place Vendôme, 75001 Paris</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Concept Notice -->
+              <div class="bg-surface/50 p-4 border border-outline-variant/30">
+                <p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+                  <strong class="text-on-surface font-medium">Concept Notice:</strong> Maison Événement is a bespoke design &amp; scenography experience concept crafted by <span class="text-secondary font-semibold">Falalu Creative Studio</span>. All submissions, portfolios, and data points remain strictly fictional and for demonstration purposes.
+                </p>
+              </div>
+
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       CONFIRMATION MODAL
+       ============================================================ -->
+  <div id="confirmation-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/80 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="bg-surface max-w-lg w-full p-8 md:p-10 text-center border border-outline-variant/20 shadow-2xl relative">
+      <div class="w-12 h-12 mx-auto rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container mb-6" aria-hidden="true">
+        <span class="material-symbols-outlined text-2xl">done</span>
+      </div>
+      <h3 id="modal-title" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight mb-3">Gratitude for Your Dialogue</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+        Your celebration blueprint has been received. <br/><br/>
+        <span class="italic">Please note: This is a demonstration form. No data was actually sent or stored.</span>
+      </p>
+      <button type="button" id="close-modal" class="inline-flex items-center justify-center h-12 px-8 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+        Return to Atelier
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="w-full bg-surface-container-low text-on-surface py-16 md:py-20">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-gutter pb-10">
+
+        <div class="md:col-span-4 flex flex-col justify-between gap-6">
+          <div class="space-y-3">
+            <span class="font-headline-md text-headline-md tracking-tight">MAISON ÉVÉNEMENT</span>
+            <p class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Haute Scenography &amp; Event Planning</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+              Curating intimate private residencies, spatial transformations, and landmark celebrations for patrons of art, fashion, and culture globally.
+            </p>
+          </div>
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Brand Concept &amp; Architecture by Falalu Creative Studio</span>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-4">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">Studio Locations</span>
+          <div class="grid grid-cols-3 gap-4 font-body-sm text-body-sm text-on-surface-variant">
+            <div><p class="font-semibold text-on-surface">Paris</p><p>Place Vendôme</p><p>75001 Paris, FR</p></div>
+            <div><p class="font-semibold text-on-surface">London</p><p>Mayfair W1</p><p>London, UK</p></div>
+            <div><p class="font-semibold text-on-surface">Florence</p><p>Lungarno Corsini</p><p>50123 Firenze, IT</p></div>
+          </div>
+          <p class="font-caption text-caption text-on-surface-variant italic">In-person consultations hosted strictly by private appointment.</p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">The Journal &amp; Inquiries</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Receive biannual private gazettes featuring scenographic essays, material studies, and private salon announcements.
+          </p>
+          <form data-newsletter-form class="flex items-stretch gap-2" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address"
+              class="w-full h-11 px-4 bg-surface border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary"
+            />
+            <button type="submit" class="h-11 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p data-newsletter-status class="hidden font-caption text-caption text-secondary" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-caption text-caption text-on-surface-variant">
+        <p class="max-w-2xl">
+          © <span data-year>2025</span> Maison Événement. Demonstration portfolio concept by Falalu Creative Studio. All names, testimonials, and project case studies are fictional.
+        </p>
+        <p class="md:text-right">Private Celebrations · Spatial Architecture · World Concierge</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+              </html>
