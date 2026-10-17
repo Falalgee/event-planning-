@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Maison Événement</title>
+  <meta name="description" content="Founded under the curatorial vision of Falalu Creative Studio, Maison Événement emerged from an uncompromising conviction: that singular milestones demand spatial choreography." />
+  <meta name="theme-color" content="#2c1422" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About — Maison Événement" />
+  <meta property="og:description" content="Founded under the curatorial vision of Falalu Creative Studio, Maison Événement emerged from an uncompromising conviction: that singular milestones demand spatial choreography." />
+  <meta property="og:url" content="https://example.com/about.html" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBmKLcnfxVDDVc6ojdlCjZnkWBqqBlXiKYZDB27gAIsJxN1hbnB4qHSlCeFGqiIjRwOjC56kbHvu86ayXrBz5xaqSWas8kDncts89HwEZjVLvwIYbw5SpiJ4h-0Nw7jedbfbbgIk6UZhOGdJNeA_4BUP5a8nnRfuFZebD_VBdTKzLVccQk6omJckP_-bzGqrkOKEruoNO4fJbpFwS6UqbWDS3oC_XiIYEzUPht3LHiLoF06vXoNCPuu" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%232c1422'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23fdf9f2' text-anchor='middle'>M</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+    ::-webkit-scrollbar { display: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 999;
+      padding: 0.75rem 1rem;
+      background: #2c1422;
+      color: #fdf9f2;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #785652;
+      outline-offset: 3px;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff", "outline": "#807479", "on-secondary-container": "#795752",
+            "on-surface": "#1c1c18", "primary-fixed-dim": "#e4bbcf", "on-tertiary-fixed-variant": "#51443a",
+            "on-primary-fixed-variant": "#5b3e4e", "secondary": "#785652", "on-secondary-fixed-variant": "#5e3f3b",
+            "surface-dim": "#dddad3", "secondary-fixed-dim": "#e8bcb7", "error-container": "#ffdad6",
+            "on-background": "#1c1c18", "on-primary-container": "#9d7a8b", "surface": "#fdf9f2",
+            "background": "#fdf9f2", "inverse-primary": "#e4bbcf", "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e6e2db", "tertiary-fixed-dim": "#d6c3b6", "primary-container": "#2c1422",
+            "on-surface-variant": "#4e4448", "tertiary-fixed": "#f3dfd1", "surface-container": "#f1ede6",
+            "surface-container-high": "#ebe8e1", "on-tertiary-fixed": "#241a11", "on-primary": "#ffffff",
+            "on-secondary": "#ffffff", "tertiary-container": "#241a11", "surface-tint": "#755566",
+            "tertiary": "#000000", "error": "#ba1a1a", "on-tertiary-container": "#918175",
+            "inverse-on-surface": "#f4f0e9", "primary": "#000000", "inverse-surface": "#31302c",
+            "on-secondary-fixed": "#2d1512", "on-error-container": "#93000a", "secondary-container": "#fdcfca",
+            "on-error": "#ffffff", "on-primary-fixed": "#2c1422", "secondary-fixed": "#ffdad5",
+            "surface-bright": "#fdf9f2", "primary-fixed": "#ffd8ea", "surface-container-highest": "#e6e2db",
+            "outline-variant": "#d1c3c8", "surface-container-low": "#f7f3ec"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem",
+            "space-lg": "2rem", "margin-tablet": "2rem", "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "margin": "4rem"
+          },
+          fontFamily: {
+            "headline-md": ["EB Garamond"], "headline-xl-mobile": ["EB Garamond"],
+            "label-regular": ["Hanken Grotesk"], "headline-sm": ["EB Garamond"],
+            "display-hero-mobile": ["EB Garamond"], "body-md": ["Hanken Grotesk"],
+            "headline-lg": ["EB Garamond"], "display-hero": ["EB Garamond"],
+            "body-sm": ["Hanken Grotesk"], "caption": ["Hanken Grotesk"],
+            "label-uppercase": ["Hanken Grotesk"], "headline-xl": ["EB Garamond"],
+            "body-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["EB Garamond"]
+          },
+          fontSize: {
+            "headline-md": ["24px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-xl-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-regular": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "display-hero-mobile": ["40px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-lg": ["36px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "caption": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "label-uppercase": ["11px", { lineHeight: "16px", letterSpacing: "0.14em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "54px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+
+    (function () {
+      'use strict';
+
+      function initMobileMenu() {
+        var toggle = document.getElementById('menu-toggle');
+        var menu   = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+
+        var icon = toggle.querySelector('.material-symbols-outlined');
+        var lastFocused = null;
+
+        function getFocusable() { return menu.querySelectorAll('a[href], button:not([disabled])'); }
+        
+        function open() {
+          lastFocused = document.activeElement;
+          menu.classList.remove('hidden');
+          document.body.classList.add('menu-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close navigation');
+          if (icon) icon.textContent = 'close';
+          var nodes = getFocusable();
+          if (nodes.length) nodes[0].focus();
+          document.addEventListener('keydown', onKey);
+        }
+        
+        function close() {
+          menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+          if (icon) icon.textContent = 'menu';
+          document.removeEventListener('keydown', onKey);
+          if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        }
+        
+        function onKey(e) {
+          if (e.key === 'Escape') { close(); return; }
+          if (e.key !== 'Tab') return;
+          var nodes = getFocusable();
+          if (!nodes.length) return;
+          var first = nodes[0];
+          var last  = nodes[nodes.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+
+        toggle.addEventListener('click', function () {
+          if (menu.classList.contains('hidden')) open();
+          else close();
+        });
+        menu.querySelectorAll('[data-menu-close], a').forEach(function (el) {
+          el.addEventListener('click', close);
+        });
+      }
+
+      function initYear() {
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      function init() { initMobileMenu(); initYear(); }
+
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } 
+      else { init(); }
+    })();
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/20">
+    <div class="h-20 w-full px-margin-mobile md:px-margin max-w-[1440px] mx-auto flex items-center justify-between gap-gutter">
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md min-w-0">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn73CQNvfLQvxBs7Uw-4DgMX_fKpT26Ov7enOEJbxsW9k38hRuyiPpD1dyWT7gPiF1U1udKsBf768myTDaL0AkkUwlUfJDUv-iYNdV92HwIj-fRiRXkpQW1AsR6bH136k4KOf8AUQTiSJwO5LlrJcM2XLLTP4aXIhvVwLoCrAskxnfKUR-F7ADzlm6Vnqm0z_m4ns0FN6UKiUZTjsOrfU4aXlgmNsPFQCe7ORWKuKEGpI7oboeEaE4"
+          alt="Maison Événement logo"
+          class="h-8 w-auto object-contain shrink-0"
+          width="32" height="32"
+          decoding="async"
+        />
+        <a href="index.html" class="flex flex-col text-left min-w-0">
+          <span class="font-headline-sm tracking-wide text-on-surface text-sm sm:text-headline-sm truncate">MAISON ÉVÉNEMENT</span>
+          <span class="hidden sm:block font-caption text-caption tracking-widest uppercase text-on-surface-variant">Event Architecture &amp; Design</span>
+        </a>
+      </div>
+
+      <nav class="hidden xl:flex items-center gap-gutter" aria-label="Primary">
+        <a href="index.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Home</a>
+        <a href="services.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Services</a>
+        <a href="portfolio.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Portfolio</a>
+        <a href="our-approach.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Our Approach</a>
+        <a href="about.html" aria-current="page" class="transition-colors tracking-widest text-on-surface font-semibold underline decoration-secondary decoration-1 underline-offset-8 font-label-uppercase text-label-uppercase">About</a>
+        <a href="enquire.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Enquire</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+        <a href="enquire.html" class="hidden sm:inline-flex items-center justify-center h-10 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+          Plan Your Event
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary transition-colors duration-200 hover:bg-secondary"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-surface xl:hidden">
+    <div class="h-full overflow-y-auto pt-24 pb-12 px-margin-mobile">
+      <nav aria-label="Mobile" class="flex flex-col">
+        <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Home</a>
+        <a href="services.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Services</a>
+        <a href="portfolio.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Portfolio</a>
+        <a href="our-approach.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Our Approach</a>
+        <a href="about.html" aria-current="page" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30 text-secondary italic">About</a>
+        <a href="enquire.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Enquire</a>
+      </nav>
+      <a href="enquire.html" class="mt-8 inline-flex w-full items-center justify-center h-12 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+        Plan Your Event
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+
+      <!-- ============================================================
+           PAGE HEADER
+           ============================================================ -->
+      <section class="w-full py-16 md:py-24 bg-surface-container-lowest border-b border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div class="max-w-4xl space-y-4">
+              <h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Architects of <span class="italic font-normal text-secondary">Ephemeral Wonder</span>
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                Founded under the curatorial vision of Falalu Creative Studio, Maison Événement emerged from an uncompromising conviction: that singular milestones demand spatial choreography as thoughtful, permanent, and tactile as haute couture or museum installations.
+              </p>
+            </div>
+            <div class="text-left md:text-right shrink-0">
+              <p class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Studio Registry No. 04 / 2025</p>
+              <p class="font-body-sm text-body-sm text-secondary pt-1">Falalu Creative Studio • Paris • London • Florence</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           STORY & PROVENANCE
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <div class="lg:col-span-4 flex flex-col gap-8">
+              <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface leading-tight tracking-tight">
+                A confluence of <br/><span class="italic font-normal">architectural rigor</span> &amp; sensory theatre.
+              </h2>
+              <div class="p-8 bg-surface-container-low border-l-2 border-secondary space-y-4">
+                <p class="font-headline-sm text-headline-sm text-on-surface italic font-normal leading-relaxed">
+                  "We construct transitory worlds that linger forever in collective memory—spaces where stone, silk, and fragrance converge."
+                </p>
+                <div class="pt-2">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface block">Falalu Creative Studio</span>
+                  <span class="font-caption text-caption text-on-surface-variant">Est. Place Vendôme, 2014</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-8 lg:pl-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+                <div class="space-y-4">
+                  <p>
+                    Our founders cut their teeth inside the hallowed workshops of classical French architecture, Parisian runway scenography, and the private hospitality wings of European nobility. Where conventional event production relies on prefabricated rentals and formulaic table settings, we treat every landscape as an unwritten spatial essay.
+                  </p>
+                  <p>
+                    From hand-cast bronze candelabras and custom botanical distillations to transient structures drafted in CAD and fabricated by ancestral Tuscan joiners, our craft honors the raw romance of pure materials.
+                  </p>
+                </div>
+                <div class="space-y-4">
+                  <p>
+                    Today, Maison operates as an intimate multidisciplinary laboratory. We sit at the delicate intersection of historical restoration, sensory direction, culinary dramaturgy, and logistical mastery—quietly delivering landmark celebrations across secluded Italian lakes, historic French châteaux, and private island archipelagos.
+                  </p>
+                  <div class="p-5 bg-surface-container border border-outline-variant/20 flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary text-2xl mt-0.5" aria-hidden="true">architecture</span>
+                    <p class="font-caption text-caption text-on-surface uppercase tracking-wider font-medium leading-relaxed">
+                      Architectural CAD Planning • Structural Physics • Bespoke Textile Weaving
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           MOODBOARD & COMMISSIONS
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface-container-low border-y border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Image -->
+            <div class="lg:col-span-6">
+              <div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmKLcnfxVDDVc6ojdlCjZnkWBqqBlXiKYZDB27gAIsJxN1hbnB4qHSlCeFGqiIjRwOjC56kbHvu86ayXrBz5xaqSWas8kDncts89HwEZjVLvwIYbw5SpiJ4h-0Nw7jedbfbbgIk6UZhOGdJNeA_4BUP5a8nnRfuFZebD_VBdTKzLVccQk6omJckP_-bzGqrkOKEruoNO4fJbpFwS6UqbWDS3oC_XiIYEzUPht3LHiLoF06vXoNCPuu" 
+                  alt="Architectural atelier moodboard wall covered with tactile fine art cotton papers, hand-drawn estate floor plans, and raw linen textile swatches." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-6 left-6 right-6">
+                  <p class="font-label-uppercase text-label-uppercase text-white/90 tracking-wider">Atelier Moodboard — Folio IX</p>
+                  <p class="font-caption text-caption text-white/70 italic mt-1">Villa Medici Materiality Study • Roman Travertine &amp; Ochre Silk</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="lg:col-span-6 space-y-8">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Twelve Commissions. <br/>
+                <span class="italic font-normal text-secondary">Zero Compromise.</span>
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                True bespoke architecture cannot be manufactured on an assembly line. To safeguard uncompromising depth of research, artisanal custom fabrication, and around-the-clock principal stewardship, Maison Événement limits its practice to strictly twelve commissions across each calendar year.
+              </p>
+              
+              <div class="space-y-6 pt-2">
+                <div class="flex items-start gap-4">
+                  <span class="font-headline-md text-headline-md text-secondary font-semibold">01</span>
+                  <div class="space-y-1">
+                    <h4 class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Unfettered Principal Immersion</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Every commission is personally steered by Hélène Falalu and Julian Vance from initial schematic sketches through dawn teardown.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="font-headline-md text-headline-md text-secondary font-semibold">02</span>
+                  <div class="space-y-1">
+                    <h4 class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Prototype Fabrication</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">We build physical 1:1 scale mockups of bespoke lighting, tablescapes, and spatial partitions in our Paris workshop for private client review.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="font-headline-md text-headline-md text-secondary font-semibold">03</span>
+                  <div class="space-y-1">
+                    <h4 class="font-label-uppercase text-label-uppercase text-on-surface tracking-wider">Discreet Concierge Autonomy</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Absolute discretion, stringent privacy protocols, and dedicated security coordination for high-profile patrons and world dignitaries.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <div class="p-4 bg-surface-container-low border border-outline-variant/20 flex items-center gap-4">
+                  <span class="material-symbols-outlined text-secondary text-2xl" aria-hidden="true">verified</span>
+                  <div>
+                    <p class="font-label-uppercase text-label-uppercase text-on-surface">2025 Calendar Status</p>
+                    <p class="font-caption text-caption text-secondary">3 Residencies Available</p>
+                  </div>
+                </div>
+                <a href="enquire.html" class="inline-flex items-center gap-2 font-label-uppercase text-label-uppercase tracking-widest text-on-surface hover:text-secondary underline decoration-secondary decoration-1 underline-offset-8 transition-colors">
+                  Request Patron Dossier →
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           STUDIO CREDO
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface-container-high">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="max-w-2xl mb-14">
+            <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+              Three Pillars of <span class="italic font-normal">Haute Scenography</span>
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              Our methodology treats fleeting moments with the dignity and permanence of timeless monumental architecture.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pillar 1 -->
+            <div class="p-8 md:p-10 bg-surface-container-lowest border border-outline-variant/20 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Pillar I</span>
+                  <span class="material-symbols-outlined text-secondary text-2xl" aria-hidden="true">draw</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Artistic Intention</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  We never replicate. Every celebration originates from a blank linen canvas, drawing inspiration from site archaeology, classical painting compositions, modern sculpture, and our patron's private heritage.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-on-surface-variant uppercase tracking-widest">
+                Site-Specific Geometry • Narrative Dramaturgy
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="p-8 md:p-10 bg-surface-container-lowest border border-outline-variant/20 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Pillar II</span>
+                  <span class="material-symbols-outlined text-secondary text-2xl" aria-hidden="true">visibility_off</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Logistical Invisibility</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  True luxury is effortless to experience yet titanic in execution. Our technical orchestrations—sound design, acoustic baffling, climate stabilization, and service flow—remain completely imperceptible to guests.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-on-surface-variant uppercase tracking-widest">
+                Acoustic Cloaking • Swiss-Trained Engineering
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="p-8 md:p-10 bg-surface-container-lowest border border-outline-variant/20 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase text-secondary tracking-widest">Pillar III</span>
+                  <span class="material-symbols-outlined text-secondary text-2xl" aria-hidden="true">interests</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Bespoke Materiality</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Sensory authenticity dictates our material palette: hand-loomed flax linens, hand-thrown porcelain tableware, reclaimed timber banquet tables, and living botanical perfumes designed for specific evening hours.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-on-surface-variant uppercase tracking-widest">
+                Raw Tactility • Olfactory Scenography
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           LEADERSHIP & CREATIVE TEAM
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 border-b border-outline-variant/30 pb-6">
+            <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+              The Minds Behind the Architecture
+            </h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              A trinity of disciplines: pure spatial architecture, high-stakes international logistics, and living floral sculpture.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Profile 1 -->
+            <div class="space-y-4 group">
+              <div class="aspect-[3/4] bg-surface-container overflow-hidden border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQNPsOKJZ7dusOJJcgfFd73SVTkJUkDCT3loeF6waf-nnn-QoMUz6yD6l8WNWOmG0tcYlWAusC93jTqVw_D_OoSqmpVvBqFRsPvD3aPVCKrKJ-O32CDGkgGj7w1nSe2jBcsY9QXWoLneg407gPuO6ggTJKPC5bqRH0GXtEOmfKv2mx205DbjmOlXSNurHKrwVHU9HhInT4EPlr9qlaSbuExswp0gm8AYNFKQMAG58pDiQWoRHeHBMJ" 
+                  alt="Monochrome fine art portrait of Hélène Falalu in a tailored dark coat against Parisian stone columns." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-1">
+                <span class="font-caption text-caption text-secondary uppercase tracking-widest font-semibold">Founder • Paris</span>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface">Hélène Falalu</h3>
+                <p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest">Architectural Scenography &amp; Direction</p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-2">
+                  Trained in structural architecture at the École Nationale Supérieure d'Architecture in Paris and Milan’s Politecnico, Hélène spent a decade orchestrating monumental runway sets and couture showcases before founding Maison.
+                </p>
+              </div>
+            </div>
+
+            <!-- Profile 2 -->
+            <div class="space-y-4 group">
+              <div class="aspect-[3/4] bg-surface-container overflow-hidden border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlI_RtV2zNMBivJ2ueEM_JJgraWUfj5lp8G64IzsrT-hyoVAzAMUeh_u8n0amx84gNS-9nHr1upx1wXUz1bP2ro0T0MWPNI1b_gpVhqvtl83IdmkUGq5KKvIX8WxZaONwWLxY8F8YFRGA7TCiUvGLqkddyqmFBV-97u9hCQz0xFlgidRtndwweQXBUOfv2EA3SSwOKoIic7On9qNChNNxGA1m3_yABDv3sKBNHDzkTLO1RWjM0ySv8" 
+                  alt="Editorial portrait of Julian Vance in a dark navy knit jacket inside an archival library reviewing blueprints." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-1">
+                <span class="font-caption text-caption text-secondary uppercase tracking-widest font-semibold">Operations • London</span>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface">Julian Vance</h3>
+                <p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest">Logistical Engineering &amp; Operations</p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-2">
+                  With a background leading operations for legendary palace hotels across Saint-Moritz, Cap d'Antibes, and Mayfair, Julian directs the complex logistical choreography—from private aviation logistics to 200-person culinary teams.
+                </p>
+              </div>
+            </div>
+
+            <!-- Profile 3 -->
+            <div class="space-y-4 group">
+              <div class="aspect-[3/4] bg-surface-container overflow-hidden border border-outline-variant/20">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc6V3JOy_Nyio36D6b6u8Bxt3Ji9CwRsXfFnZ-fGw6mtOgpojRgMDYdcxZCgFQj2cXC0Edfp2xyW3Nyh_IqIbbDrGDC-LKvXlwiL7KMN-jVQT83GyxmV0Ie6JIyh9Fvy10UgEHzQvuZI7U3XBPxmehPLWip7aWA8ANJy1WicbG16UO0L7vVwOorv5a6sOJlOi0XRzJPbMHP48JYSTIR0EHr0jdt1C1oHa2k1Jl_rU_y_UMr3fP6Fc4" 
+                  alt="Editorial fine art portrait of Astrid Lindqvist arranging a dramatic sculptural installation of plum roses in a stone conservatory." 
+                  class="w-full h-full object-cover" 
+                  loading="lazy" 
+                  decoding="async"
+                />
+              </div>
+              <div class="space-y-1">
+                <span class="font-caption text-caption text-secondary uppercase tracking-widest font-semibold">Botanics • Florence</span>
+                <h3 class="font-headline-lg text-headline-lg text-on-surface">Astrid Lindqvist</h3>
+                <p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest">Head of Botanical Scenography</p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-2">
+                  Celebrated across Scandinavian galleries and Venetian palazzi for her avant-garde botanical forms, Astrid rejects artificial foams in favor of historical Japanese ikebana mechanics, weaving native flora into grand living architectural sculptures.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           GLOBAL PRESENCE
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface-container-low border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+              Our Atelier Chambers
+            </h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+              Clients are welcomed by private appointment to experience tactile material palettes, sample curated degustations, and review spatial renderings.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Paris -->
+            <div class="bg-surface-container-lowest border border-outline-variant/20 p-8 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-headline-lg text-headline-lg text-on-surface">Paris</span>
+                  <span class="font-label-uppercase text-label-uppercase text-secondary">Headquarters</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface font-medium">Place Vendôme, 1er Arrondissement</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  75001 Paris, France<br/>
+                  Home to our primary design studio, material archives, and private tasting salon.
+                </p>
+              </div>
+              <div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between text-on-surface font-caption text-caption">
+                <span>paris@maison-evenement.com</span>
+                <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">north_east</span>
+              </div>
+            </div>
+
+            <!-- London -->
+            <div class="bg-surface-container-lowest border border-outline-variant/20 p-8 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-headline-lg text-headline-lg text-on-surface">London</span>
+                  <span class="font-label-uppercase text-label-uppercase text-secondary">Production Hub</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface font-medium">Mount Street, Mayfair</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  London W1K 2TE, United Kingdom<br/>
+                  Dedicated to UK country house estates, Scottish castles, and international logistical staging.
+                </p>
+              </div>
+              <div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between text-on-surface font-caption text-caption">
+                <span>london@maison-evenement.com</span>
+                <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">north_east</span>
+              </div>
+            </div>
+
+            <!-- Florence -->
+            <div class="bg-surface-container-lowest border border-outline-variant/20 p-8 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-headline-lg text-headline-lg text-on-surface">Florence</span>
+                  <span class="font-label-uppercase text-label-uppercase text-secondary">Botanical Studio</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface font-medium">Lungarno Corsini, Palazzo Ricasoli</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  50123 Firenze, Italy<br/>
+                  Overseeing Mediterranean celebrations, Tuscan villa transformations, and botanical foraging.
+                </p>
+              </div>
+              <div class="pt-6 border-t border-outline-variant/30 flex items-center justify-between text-on-surface font-caption text-caption">
+                <span>firenze@maison-evenement.com</span>
+                <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">north_east</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PRESS & ACCOLADES
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="text-center space-y-3 mb-14">
+            <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-md md:text-headline-md text-on-surface italic tracking-tight">
+              The International Gazette &amp; Architectural Discourse
+            </h3>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div class="p-6 bg-surface-container-low border border-outline-variant/20 space-y-4">
+              <p class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface font-semibold">VOGUE LIVING</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                "Maison Événement doesn't merely decorate venues; they manifest architectural sanctuaries that redefine the limits of transient beauty."
+              </p>
+              <span class="font-caption text-caption text-secondary block">Special Issue: Global Art Direction</span>
+            </div>
+            <div class="p-6 bg-surface-container-low border border-outline-variant/20 space-y-4">
+              <p class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface font-semibold">ARCHITECTURAL DIGEST</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                "The standard for historic preservation paired with radical scenography. A singular masterclass in high-restraint spatial luxury."
+              </p>
+              <span class="font-caption text-caption text-secondary block">Landmark Celebrations Feature</span>
+            </div>
+            <div class="p-6 bg-surface-container-low border border-outline-variant/20 space-y-4">
+              <p class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface font-semibold">HARPER'S BAZAAR</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+                "The 12-commission limit is an act of sheer creative discipline. Every event under Hélène Falalu feels like an unforgettable private salon."
+              </p>
+              <span class="font-caption text-caption text-secondary block">The Haute List: Elite Visionaries</span>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <p class="font-caption text-caption text-on-surface-variant italic">
+              All press mentions and accolades are fictional and for demonstration purposes only.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CTA
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-primary-container text-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-7 space-y-3">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-surface tracking-tight leading-[1.05]">
+                Meet with Our Principals
+              </h2>
+              <p class="font-body-md text-body-md text-surface-variant max-w-xl leading-relaxed">
+                We invite patrons of art, architecture, and distinction to initiate private dialogue regarding 2025 and 2026 residencies.
+              </p>
+            </div>
+            <div class="lg:col-span-5 flex flex-col sm:flex-row lg:justify-end items-stretch sm:items-center gap-3">
+              <a href="enquire.html" class="inline-flex items-center justify-center h-12 px-7 bg-surface text-primary-container font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-surface-container-high">
+                Request Private Appointment
+              </a>
+              <a href="portfolio.html" class="inline-flex items-center justify-center h-12 px-5 text-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:text-primary-fixed-dim">
+                Explore Archive Folio
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="w-full bg-surface-container-low text-on-surface py-16 md:py-20">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-gutter pb-10">
+
+        <div class="md:col-span-4 flex flex-col justify-between gap-6">
+          <div class="space-y-3">
+            <span class="font-headline-md text-headline-md tracking-tight">MAISON ÉVÉNEMENT</span>
+            <p class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Haute Scenography &amp; Event Planning</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+              Curating intimate private residencies, spatial transformations, and landmark celebrations for patrons of art, fashion, and culture globally.
+            </p>
+          </div>
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Brand Concept &amp; Architecture by Falalu Creative Studio</span>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-4">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">Studio Locations</span>
+          <div class="grid grid-cols-3 gap-4 font-body-sm text-body-sm text-on-surface-variant">
+            <div><p class="font-semibold text-on-surface">Paris</p><p>Place Vendôme</p><p>75001 Paris, FR</p></div>
+            <div><p class="font-semibold text-on-surface">London</p><p>Mayfair W1</p><p>London, UK</p></div>
+            <div><p class="font-semibold text-on-surface">Florence</p><p>Lungarno Corsini</p><p>50123 Firenze, IT</p></div>
+          </div>
+          <p class="font-caption text-caption text-on-surface-variant italic">In-person consultations hosted strictly by private appointment.</p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">The Journal &amp; Inquiries</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Receive biannual private gazettes featuring scenographic essays, material studies, and private salon announcements.
+          </p>
+          <form data-newsletter-form class="flex items-stretch gap-2" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address"
+              class="w-full h-11 px-4 bg-surface border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary"
+            />
+            <button type="submit" class="h-11 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p data-newsletter-status class="hidden font-caption text-caption text-secondary" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-caption text-caption text-on-surface-variant">
+        <p class="max-w-2xl">
+          © <span data-year>2025</span> Maison Événement. Demonstration portfolio concept by Falalu Creative Studio. All names, testimonials, and project case studies are fictional.
+        </p>
+        <p class="md:text-right">Private Celebrations · Spatial Architecture · World Concierge</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+                                                                                                           </html>
