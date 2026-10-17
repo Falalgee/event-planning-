@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Maison Événement</title>
+  <meta name="description" content="Comprehensive planning and spatial artistry. Explore the bespoke service tiers of Maison Événement, from full wedding architecture to immersive floral design." />
+  <meta name="theme-color" content="#2c1422" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services — Maison Événement" />
+  <meta property="og:description" content="Comprehensive planning and spatial artistry. Explore the bespoke service tiers of Maison Événement." />
+  <meta property="og:url" content="https://example.com/services.html" />
+  <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuB1eARYNpRxER5ULSHS1620J_pgWGcCOdBKtceORSvZkeKsSqniR-s4bcrFZPAOT0o6MmNSGEBxZMszpf233Vwpb4ZZCdst90hefvkvykeLg_vMM2NUsammBID4Kt8QI209stWSjzUDsvxdTI7Vf9_MSl83u5ozSk1wDaGhQtvK91SUzclE-5KgpWp4SErH-IGX3sgy5B5Qb5VuKnkXqB9afdkB6ANYN3l1xLiV4bKzLUKo8yNIuImb" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%232c1422'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23fdf9f2' text-anchor='middle'>M</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
+
+  <style>
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+    ::-webkit-scrollbar { display: none; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 999;
+      padding: 0.75rem 1rem;
+      background: #2c1422;
+      color: #fdf9f2;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #785652;
+      outline-offset: 3px;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary": "#ffffff", "outline": "#807479", "on-secondary-container": "#795752",
+            "on-surface": "#1c1c18", "primary-fixed-dim": "#e4bbcf", "on-tertiary-fixed-variant": "#51443a",
+            "on-primary-fixed-variant": "#5b3e4e", "secondary": "#785652", "on-secondary-fixed-variant": "#5e3f3b",
+            "surface-dim": "#dddad3", "secondary-fixed-dim": "#e8bcb7", "error-container": "#ffdad6",
+            "on-background": "#1c1c18", "on-primary-container": "#9d7a8b", "surface": "#fdf9f2",
+            "background": "#fdf9f2", "inverse-primary": "#e4bbcf", "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e6e2db", "tertiary-fixed-dim": "#d6c3b6", "primary-container": "#2c1422",
+            "on-surface-variant": "#4e4448", "tertiary-fixed": "#f3dfd1", "surface-container": "#f1ede6",
+            "surface-container-high": "#ebe8e1", "on-tertiary-fixed": "#241a11", "on-primary": "#ffffff",
+            "on-secondary": "#ffffff", "tertiary-container": "#241a11", "surface-tint": "#755566",
+            "tertiary": "#000000", "error": "#ba1a1a", "on-tertiary-container": "#918175",
+            "inverse-on-surface": "#f4f0e9", "primary": "#000000", "inverse-surface": "#31302c",
+            "on-secondary-fixed": "#2d1512", "on-error-container": "#93000a", "secondary-container": "#fdcfca",
+            "on-error": "#ffffff", "on-primary-fixed": "#2c1422", "secondary-fixed": "#ffdad5",
+            "surface-bright": "#fdf9f2", "primary-fixed": "#ffd8ea", "surface-container-highest": "#e6e2db",
+            "outline-variant": "#d1c3c8", "surface-container-low": "#f7f3ec"
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          spacing: {
+            "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem",
+            "space-lg": "2rem", "margin-tablet": "2rem", "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-xl": "3.5rem", "margin": "4rem"
+          },
+          fontFamily: {
+            "headline-md": ["EB Garamond"], "headline-xl-mobile": ["EB Garamond"],
+            "label-regular": ["Hanken Grotesk"], "headline-sm": ["EB Garamond"],
+            "display-hero-mobile": ["EB Garamond"], "body-md": ["Hanken Grotesk"],
+            "headline-lg": ["EB Garamond"], "display-hero": ["EB Garamond"],
+            "body-sm": ["Hanken Grotesk"], "caption": ["Hanken Grotesk"],
+            "label-uppercase": ["Hanken Grotesk"], "headline-xl": ["EB Garamond"],
+            "body-lg": ["Hanken Grotesk"], "headline-lg-mobile": ["EB Garamond"]
+          },
+          fontSize: {
+            "headline-md": ["24px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-xl-mobile": ["32px", { lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-regular": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "500" }],
+            "display-hero-mobile": ["40px", { lineHeight: "46px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-lg": ["36px", { lineHeight: "42px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "caption": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "label-uppercase": ["11px", { lineHeight: "16px", letterSpacing: "0.14em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "54px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+
+    (function () {
+      'use strict';
+
+      function initMobileMenu() {
+        var toggle = document.getElementById('menu-toggle');
+        var menu   = document.getElementById('mobile-menu');
+        if (!toggle || !menu) return;
+
+        var icon = toggle.querySelector('.material-symbols-outlined');
+        var lastFocused = null;
+
+        function getFocusable() { return menu.querySelectorAll('a[href], button:not([disabled])'); }
+        
+        function open() {
+          lastFocused = document.activeElement;
+          menu.classList.remove('hidden');
+          document.body.classList.add('menu-open');
+          toggle.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-label', 'Close navigation');
+          if (icon) icon.textContent = 'close';
+          var nodes = getFocusable();
+          if (nodes.length) nodes[0].focus();
+          document.addEventListener('keydown', onKey);
+        }
+        
+        function close() {
+          menu.classList.add('hidden');
+          document.body.classList.remove('menu-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+          if (icon) icon.textContent = 'menu';
+          document.removeEventListener('keydown', onKey);
+          if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        }
+        
+        function onKey(e) {
+          if (e.key === 'Escape') { close(); return; }
+          if (e.key !== 'Tab') return;
+          var nodes = getFocusable();
+          if (!nodes.length) return;
+          var first = nodes[0];
+          var last  = nodes[nodes.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } 
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+
+        toggle.addEventListener('click', function () {
+          if (menu.classList.contains('hidden')) open();
+          else close();
+        });
+        menu.querySelectorAll('[data-menu-close], a').forEach(function (el) {
+          el.addEventListener('click', close);
+        });
+      }
+
+      function initYear() {
+        document.querySelectorAll('[data-year]').forEach(function (el) {
+          el.textContent = new Date().getFullYear();
+        });
+      }
+
+      function init() { initMobileMenu(); initYear(); }
+
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } 
+      else { init(); }
+    })();
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/20">
+    <div class="h-20 w-full px-margin-mobile md:px-margin max-w-[1440px] mx-auto flex items-center justify-between gap-gutter">
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md min-w-0">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn73CQNvfLQvxBs7Uw-4DgMX_fKpT26Ov7enOEJbxsW9k38hRuyiPpD1dyWT7gPiF1U1udKsBf768myTDaL0AkkUwlUfJDUv-iYNdV92HwIj-fRiRXkpQW1AsR6bH136k4KOf8AUQTiSJwO5LlrJcM2XLLTP4aXIhvVwLoCrAskxnfKUR-F7ADzlm6Vnqm0z_m4ns0FN6UKiUZTjsOrfU4aXlgmNsPFQCe7ORWKuKEGpI7oboeEaE4"
+          alt="Maison Événement logo"
+          class="h-8 w-auto object-contain shrink-0"
+          width="32" height="32"
+          decoding="async"
+        />
+        <a href="index.html" class="flex flex-col text-left min-w-0">
+          <span class="font-headline-sm tracking-wide text-on-surface text-sm sm:text-headline-sm truncate">MAISON ÉVÉNEMENT</span>
+          <span class="hidden sm:block font-caption text-caption tracking-widest uppercase text-on-surface-variant">Event Architecture &amp; Design</span>
+        </a>
+      </div>
+
+      <nav class="hidden xl:flex items-center gap-gutter" aria-label="Primary">
+        <a href="index.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Home</a>
+        <a href="services.html" aria-current="page" class="transition-colors tracking-widest text-on-surface font-semibold underline decoration-secondary decoration-1 underline-offset-8 font-label-uppercase text-label-uppercase">Services</a>
+        <a href="portfolio.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Portfolio</a>
+        <a href="our-approach.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Our Approach</a>
+        <a href="about.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">About</a>
+        <a href="enquire.html" class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-on-surface transition-colors tracking-widest">Enquire</a>
+      </nav>
+
+      <div class="flex items-center gap-space-sm sm:gap-space-md shrink-0">
+        <a href="enquire.html" class="hidden sm:inline-flex items-center justify-center h-10 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+          Plan Your Event
+        </a>
+        <button
+          id="menu-toggle"
+          type="button"
+          class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary transition-colors duration-200 hover:bg-secondary"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation"
+        >
+          <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile menu drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-surface xl:hidden">
+    <div class="h-full overflow-y-auto pt-24 pb-12 px-margin-mobile">
+      <nav aria-label="Mobile" class="flex flex-col">
+        <a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Home</a>
+        <a href="services.html" aria-current="page" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30 text-secondary italic">Services</a>
+        <a href="portfolio.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Portfolio</a>
+        <a href="our-approach.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Our Approach</a>
+        <a href="about.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">About</a>
+        <a href="enquire.html" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface py-4 border-b border-outline-variant/30">Enquire</a>
+      </nav>
+      <a href="enquire.html" class="mt-8 inline-flex w-full items-center justify-center h-12 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+        Plan Your Event
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+
+      <!-- ============================================================
+           PAGE HEADER
+           ============================================================ -->
+      <section class="w-full py-16 md:py-24 border-b border-outline-variant/20 bg-surface-container-lowest">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05] max-w-4xl mb-6">
+            Comprehensive Planning &amp; Spatial Artistry
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            We operate not as transactional coordinators, but as an architectural atelier. Every occasion is treated as an ephemeral gallery: commissioned with intention, designed with monastic material honesty, and brought to life through rigorous logistical engineering.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PHILOSOPHY
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                The Atelier Philosophy
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                From historic renaissance estates on the shores of Lake Como to cliffside pavilions in the Cyclades, we limit our commissions to twelve private patrons per calendar year to preserve unwavering devotion to detail.
+              </p>
+            </div>
+            
+            <div class="lg:col-span-5 bg-surface-container-low p-8 md:p-10 border border-outline-variant/20 flex flex-col justify-between">
+              <p class="font-headline-sm text-headline-sm text-on-surface italic leading-relaxed mb-8">
+                "Beauty without structural discipline is merely ornamentation. We craft spatial memory."
+              </p>
+              <div class="grid grid-cols-2 gap-6 pt-6 border-t border-outline-variant/30">
+                <div>
+                  <p class="font-headline-xl text-headline-xl text-on-surface leading-none">12</p>
+                  <p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest mt-2">Annual Commissions</p>
+                </div>
+                <div>
+                  <p class="font-headline-xl text-headline-xl text-on-surface leading-none">100%</p>
+                  <p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest mt-2">Bespoke Spatial Plans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SERVICE TIERS
+           ============================================================ -->
+      <section class="w-full pb-20 md:pb-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin space-y-6">
+          
+          <!-- Tier 01 -->
+          <article class="grid grid-cols-1 lg:grid-cols-12 bg-surface-container-lowest border border-outline-variant/20 overflow-hidden">
+            <div class="lg:col-span-7 relative min-h-[380px] lg:min-h-[520px] bg-surface-container">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1eARYNpRxER5ULSHS1620J_pgWGcCOdBKtceORSvZkeKsSqniR-s4bcrFZPAOT0o6MmNSGEBxZMszpf233Vwpb4ZZCdst90hefvkvykeLg_vMM2NUsammBID4Kt8QI209stWSjzUDsvxdTI7Vf9_MSl83u5ozSk1wDaGhQtvK91SUzclE-5KgpWp4SErH-IGX3sgy5B5Qb5VuKnkXqB9afdkB6ANYN3l1xLiV4bKzLUKo8yNIuImb"
+                alt="High-end luxury wedding dinner scene in an ancient Italian villa loggia at dusk."
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">01 / Marriages of Distinction</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                  Wedding Planning &amp; Spatial Production
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Full holistic orchestration for couples desiring an effortless, cinematic weekend residency. We handle international property scouting, strict timeline logistics, private transport networks, and multi-day experiential itineraries.
+                </p>
+                <div class="space-y-3 pt-2">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface block mb-3">Included Repertoire</span>
+                  <ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                      <span>International venue scouting &amp; private land charter permits</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                      <span>Multi-day guest itineraries: rehearsal feasts, welcome parties, farewell brunches</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                      <span>Precision run-of-show timeline engineering and artist contract management</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                      <span>Complete vendor orchestration, Michelin culinary curation, and cellar selection</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pt-8 mt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <a href="enquire.html" class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface underline decoration-secondary decoration-1 underline-offset-8 hover:text-secondary transition-colors">
+                  Consult With Our Principal →
+                </a>
+                <span class="font-caption text-caption text-on-surface-variant uppercase tracking-widest">From 3-Day Programs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tiers 02 & 03 -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Tier 02 -->
+            <article class="bg-surface-container-high border border-outline-variant/20 p-8 lg:p-10 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">02 / Haute Scenography</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                  Event Styling &amp; Floral Installations
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Transformative visual concepts rooted in botanic sculpture, tactile materiality, and tailored illumination. We design singular tablescapes with custom-milled textiles, handmade ceramics, and bespoke stationery suites.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface block mb-3">Core Disciplines</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Sculptural botanical centerpieces • Architectural candlelight design • Artisanal linen &amp; flatware sourcing • Letterpress &amp; wax seal stationery • Olfactory spatial scenting
+                  </p>
+                </div>
+              </div>
+              <div class="pt-8 mt-8">
+                <a href="enquire.html" class="inline-flex items-center justify-center h-11 px-6 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+                  Request Scenography Portfolio
+                </a>
+              </div>
+            </article>
+
+            <!-- Tier 03 -->
+            <article class="bg-surface-container border border-outline-variant/20 p-8 lg:p-10 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">03 / Intimate Salons</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                  Birthdays &amp; Milestone Celebrations
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Marking pivotal life chapters with profound intimacy and theatrical flair. Whether orchestrating an uninhibited masked ball in Venice or a weekend gathering at a secluded Provence bastide with renowned guest chefs.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface block mb-3">Curated Elements</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Private estate takeovers • Michelin-starred culinary residencies • Live orchestral &amp; acoustic ensemble curation • Bespoke mixology bars • Guest transport hospitality
+                  </p>
+                </div>
+              </div>
+              <div class="pt-8 mt-8">
+                <a href="enquire.html" class="inline-flex items-center justify-center h-11 px-6 border border-outline-variant text-on-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-surface">
+                  Explore Milestone Concepts
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Tiers 04 & 05 -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Tier 04 -->
+            <article class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant/20 p-8 lg:p-10 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">04 / Brand Environments</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                  Corporate Gatherings &amp; Brand Galas
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Translating the ethos of fine jewelry houses, couture labels, and private family offices into immersive spatial narratives. We engineer environments that mesmerize media, key patrons, and global executives.
+                </p>
+                <ul class="space-y-3 font-body-sm text-body-sm text-on-surface-variant pt-2">
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                    <span>Global press previews &amp; immersive high-jewelry unveilings</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                    <span>Discreet C-suite retreats in architectural sanctuaries</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" aria-hidden="true">check_circle</span>
+                    <span>Cultural foundation galas with live staging &amp; donor lounges</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-8 mt-8 border-t border-outline-variant/20">
+                <span class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Confidentiality NDA Guaranteed</span>
+              </div>
+            </article>
+
+            <!-- Tier 05 -->
+            <article class="lg:col-span-7 bg-primary-container text-on-primary p-8 lg:p-12 flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+                  <span class="font-label-uppercase text-label-uppercase tracking-widest text-primary-fixed">05 / Raw Space Alchemy</span>
+                </div>
+                <h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-surface tracking-tight leading-tight">
+                  Venue Decoration &amp; Spatial Transformations
+                </h3>
+                <p class="font-body-md text-body-md text-surface-variant leading-relaxed">
+                  Metamorphosing raw warehouses, clifftop headlands, and empty historic ruins into self-sustaining palaces of wonder. We construct bespoke glass-roof marquees, tailored acoustic wall drapery, suspended floral canopies, and custom raised timber parquetry.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                  <div class="bg-surface/10 p-5 border border-surface/10">
+                    <span class="font-label-uppercase text-label-uppercase text-primary-fixed block mb-2">Temporary Architecture</span>
+                    <p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Climate-controlled bespoke glass pavilions, heavy linen valances, engineered subflooring, and architectural trussing hidden by draped silks.</p>
+                  </div>
+                  <div class="bg-surface/10 p-5 border border-surface/10">
+                    <span class="font-label-uppercase text-label-uppercase text-primary-fixed block mb-2">Atmospheric Engineering</span>
+                    <p class="font-body-sm text-body-sm text-surface-variant leading-relaxed">Generator redundancy matrices, subtle architectural downlighting, water features, and luxury modular powder rooms.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-8 mt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <a href="enquire.html" class="inline-flex items-center justify-center h-11 px-6 bg-surface text-primary-container font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-surface-container-high">
+                  Commission a Transformation
+                </a>
+                <span class="font-caption text-caption text-surface-variant uppercase tracking-widest">Global Rigging Partners</span>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           METHODOLOGY
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface-container-low border-y border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+              Spatial Orchestration Lifecycle
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              A disciplined chronological approach that transforms conceptual sketches into structural precision and timeless guest memories.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-surface p-6 border border-outline-variant/20 hover:border-outline-variant/40 transition-colors duration-200">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-headline-md text-headline-md text-secondary">01</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-[20px]" aria-hidden="true">architecture</span>
+              </div>
+              <span class="font-label-uppercase text-label-uppercase tracking-wider text-on-surface block mb-2">Charrette &amp; Site Scan</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Laser-level site surveys, natural light mapping across time of day, and spatial narrative workshops with our principal.</p>
+            </div>
+            
+            <div class="bg-surface p-6 border border-outline-variant/20 hover:border-outline-variant/40 transition-colors duration-200">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-headline-md text-headline-md text-secondary">02</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-[20px]" aria-hidden="true">view_in_ar</span>
+              </div>
+              <span class="font-label-uppercase text-label-uppercase tracking-wider text-on-surface block mb-2">3D Architectural Rendering</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Photorealistic volumetric walkthroughs with dynamic lighting simulations, furniture placements, and floral textures.</p>
+            </div>
+            
+            <div class="bg-surface p-6 border border-outline-variant/20 hover:border-outline-variant/40 transition-colors duration-200">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-headline-md text-headline-md text-secondary">03</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-[20px]" aria-hidden="true">palette</span>
+              </div>
+              <span class="font-label-uppercase text-label-uppercase tracking-wider text-on-surface block mb-2">Material &amp; Taste Salon</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Tactile presentation box shipped to your residence with archival paper stocks, stone swatches, fabric cuts, and private tastings.</p>
+            </div>
+            
+            <div class="bg-surface p-6 border border-outline-variant/20 hover:border-outline-variant/40 transition-colors duration-200">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-headline-md text-headline-md text-secondary">04</span>
+                <span class="material-symbols-outlined text-on-surface-variant text-[20px]" aria-hidden="true">concierge</span>
+              </div>
+              <span class="font-label-uppercase text-label-uppercase tracking-wider text-on-surface block mb-2">On-Site Execution</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Full logistical command center active 72 hours prior, complete radio-synchronized crew, and discrete guest concierge.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           INCLUSIONS
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="max-w-2xl mb-14">
+            <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+              What Every Engagement Includes
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              Regardless of scale or topography, each commission receives our unyielding technical infrastructure and full creative suite.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Pillar 1 -->
+            <div class="bg-surface-container-low p-8 border border-outline-variant/20 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-on-surface border border-outline-variant/20" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">person_check</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-on-surface block font-normal">Dedicated Director</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  One of our senior studio directors is permanently assigned to your production as your single point of creative and fiscal contact.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-secondary uppercase tracking-widest">
+                Personal Advisory • Direct Line
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-surface-container-low p-8 border border-outline-variant/20 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-on-surface border border-outline-variant/20" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">deployed_code</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-on-surface block font-normal">3D Spatial Renders</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Comprehensive spatial mockups, sun-angle studies, and seating blueprints to eliminate uncertainty long before installation begins.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-secondary uppercase tracking-widest">
+                Millimeter-Exact Schematics
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-surface-container-low p-8 border border-outline-variant/20 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-on-surface border border-outline-variant/20" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-on-surface block font-normal">Transparent Ledger</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Uncompromising fiscal clarity. Live cloud-synced budget allocations with zero hidden vendor markups or undisclosed agency kickbacks.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-secondary uppercase tracking-widest">
+                Open-Book Accounting
+              </div>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-surface-container-low p-8 border border-outline-variant/20 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+              <div class="space-y-4">
+                <div class="w-10 h-10 bg-surface-container flex items-center justify-center text-on-surface border border-outline-variant/20" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">room_service</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-on-surface block font-normal">On-Site Concierge</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Multilingual white-glove team dedicated to attendee wellbeing, luggage arrivals, discreet VIP escorting, and emergency tailoring.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-outline-variant/20 font-caption text-caption text-secondary uppercase tracking-widest">
+                Discreet Hospitality
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           INVESTMENT
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface-container-high border-t border-outline-variant/20">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Transparent Retainer Architecture
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                To maintain uncompromising quality and provide our clients with total devotion, we work on a transparent flat-design and production retainer structure rather than opaque percentages.
+              </p>
+              <p class="font-caption text-caption text-on-surface-variant italic">
+                Production materials, floral orders, catering, travel, and venue hire are billed at direct vendor cost.
+              </p>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Tier Card 1 -->
+              <div class="bg-surface p-8 border border-outline-variant/20 flex flex-col justify-between">
+                <div class="space-y-3">
+                  <span class="font-label-uppercase text-label-uppercase tracking-wider text-secondary">Private Celebrations</span>
+                  <p class="font-headline-md text-headline-md text-on-surface">From €15,000</p>
+                  <p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Planning &amp; Scenography Retainer</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+                    Ideal for milestone galas, single-evening estate dinners, intimate brand dinners, and bespoke anniversary soirees up to 80 guests.
+                  </p>
+                </div>
+                <div class="space-y-2 pt-6 mt-6 border-t border-outline-variant/20">
+                  <span class="font-caption text-caption text-on-surface-variant block">• Dedicated Lead Scenographer</span>
+                  <span class="font-caption text-caption text-on-surface-variant block">• Complete Table Architecture</span>
+                  <span class="font-caption text-caption text-on-surface-variant block">• Day-of Production Supervision</span>
+                </div>
+              </div>
+
+              <!-- Tier Card 2 -->
+              <div class="bg-primary-container text-on-primary p-8 flex flex-col justify-between">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-uppercase text-label-uppercase tracking-wider text-primary-fixed">Multi-Day Residences</span>
+                  </div>
+                  <p class="font-headline-md text-headline-md text-surface">From €35,000</p>
+                  <p class="font-caption text-caption text-surface-dim uppercase tracking-wider">Planning &amp; Design Retainer</p>
+                  <p class="font-body-sm text-body-sm text-surface-variant pt-2 leading-relaxed">
+                    Comprehensive 3-to-4 day destination gatherings, remote villa takeovers, wedding celebrations, and high-complexity marquee transformations.
+                  </p>
+                </div>
+                <div class="space-y-2 pt-6 mt-6 border-t border-outline-variant/20">
+                  <span class="font-caption text-caption text-surface-dim block">• Atelier Director &amp; Full Team of 6+</span>
+                  <span class="font-caption text-caption text-surface-dim block">• 3D Photorealistic Pre-Visualizations</span>
+                  <span class="font-caption text-caption text-surface-dim block">• Full Destination Concierge Logistics</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CTA
+           ============================================================ -->
+      <section class="w-full py-20 md:py-28 bg-surface">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div class="lg:col-span-7 space-y-3">
+              <h2 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface tracking-tight leading-[1.05]">
+                Inquire for Your Date
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl leading-relaxed">
+                We are currently receiving calendar appointments for the late 2025 and full 2026 European and international season. Initial consultations are held in our Paris, London, or Florence private salons.
+              </p>
+            </div>
+            <div class="lg:col-span-5 flex flex-col sm:flex-row lg:justify-end items-stretch sm:items-center gap-3">
+              <a href="enquire.html" class="inline-flex items-center justify-center h-12 px-7 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary">
+                Commence Private Dialogue
+              </a>
+              <a href="portfolio.html" class="inline-flex items-center justify-center h-12 px-5 text-on-surface font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:text-secondary">
+                View Recent Galas
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="w-full bg-surface-container-low text-on-surface py-16 md:py-20">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-gutter pb-10">
+
+        <div class="md:col-span-4 flex flex-col justify-between gap-6">
+          <div class="space-y-3">
+            <span class="font-headline-md text-headline-md tracking-tight">MAISON ÉVÉNEMENT</span>
+            <p class="font-caption text-caption uppercase tracking-widest text-on-surface-variant">Haute Scenography &amp; Event Planning</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+              Curating intimate private residencies, spatial transformations, and landmark celebrations for patrons of art, fashion, and culture globally.
+            </p>
+          </div>
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-secondary">Brand Concept &amp; Architecture by Falalu Creative Studio</span>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-4">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">Studio Locations</span>
+          <div class="grid grid-cols-3 gap-4 font-body-sm text-body-sm text-on-surface-variant">
+            <div><p class="font-semibold text-on-surface">Paris</p><p>Place Vendôme</p><p>75001 Paris, FR</p></div>
+            <div><p class="font-semibold text-on-surface">London</p><p>Mayfair W1</p><p>London, UK</p></div>
+            <div><p class="font-semibold text-on-surface">Florence</p><p>Lungarno Corsini</p><p>50123 Firenze, IT</p></div>
+          </div>
+          <p class="font-caption text-caption text-on-surface-variant italic">In-person consultations hosted strictly by private appointment.</p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="font-label-uppercase text-label-uppercase tracking-widest text-on-surface">The Journal &amp; Inquiries</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Receive biannual private gazettes featuring scenographic essays, material studies, and private salon announcements.
+          </p>
+          <form data-newsletter-form class="flex items-stretch gap-2" novalidate>
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              required
+              placeholder="Your email address"
+              class="w-full h-11 px-4 bg-surface border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary"
+            />
+            <button type="submit" class="h-11 px-5 bg-primary-container text-on-primary font-label-uppercase text-label-uppercase tracking-widest transition-colors duration-200 hover:bg-secondary whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p data-newsletter-status class="hidden font-caption text-caption text-secondary" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-caption text-caption text-on-surface-variant">
+        <p class="max-w-2xl">
+          © <span data-year>2025</span> Maison Événement. Demonstration portfolio concept by Falalu Creative Studio. All names, testimonials, and project case studies are fictional.
+        </p>
+        <p class="md:text-right">Private Celebrations · Spatial Architecture · World Concierge</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+  </html>
